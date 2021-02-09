@@ -126,7 +126,7 @@ export default [
     Equipe Appmax.`
   },
   {
-    name: 'rastreio-incorreto_masculino',
+    name: 'rastreio-incorreto-masculino',
     keyWords: ['rastreio', 'incorreto', 'masculino'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
