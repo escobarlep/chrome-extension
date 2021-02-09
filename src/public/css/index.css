@@ -1,0 +1,20 @@
+body {
+  /* background-color:black; */
+  /* color: white; */
+  font-size: medium;
+  width: 40em;
+}
+
+/* overrides */
+.nav-wrapper {
+  background-color: #000066 !important;
+  color: white !important
+}
+input[type=text]:not(.browser-default):focus:not([readonly]) + label {
+  color: #000066 !important;
+}
+/* .collection .collection-item {
+  background-color: #000;
+  border-bottom: 1px solid white;
+  color: white;
+} */
