@@ -1,7 +1,6 @@
-'use strict'
 import dbSetup from '/src/migrations/initial-setup.js'
 export default {
-  _migrationVersion: '4',
+  _migrationVersion: '5',
   setStorage: function(storage) {
     this.storage = storage
   },

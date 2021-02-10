@@ -1,5 +1,3 @@
-'use strict'
-
 export default [
   {
     name: 'sem-rastreio-feminino',
@@ -490,25 +488,172 @@ export default [
     ],
     content: ` Olá KEY_WORD_CUSTOMER_FIRSTNAME!
 
-Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e darei continuidade ao seu atendimento.
+    Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e darei continuidade ao seu atendimento.
 
-Conforme o combinado, caso você não fosse atendido devidamente, nós da Appmax, tomaríamos uma medida de ação, a fim de resolver o problema.
+    Conforme o combinado, caso você não fosse atendido devidamente, nós da Appmax, tomaríamos uma medida de ação, a fim de resolver o problema.
 
-Como o parceiro KEY_WORD_PARTNER_NAME não deu um retorno efetivo, vamos dar inicio ao processo de estorno de sua compra. Lembrando que sua compra foi realizada através de boleto e o prazo para estorno é de até 10 dias úteis, após o recebimento de seus dados bancários conforme segue abaixo:
+    Como o parceiro KEY_WORD_PARTNER_NAME não deu um retorno efetivo, vamos dar inicio ao processo de estorno de sua compra. Lembrando que sua compra foi realizada através de boleto e o prazo para estorno é de até 10 dias úteis, após o recebimento de seus dados bancários conforme segue abaixo:
 
-Nome completo do titular da conta:
-CPF:
-Banco:
-Agência:
-Tipo de Conta:
-Conta:
+    Nome completo do titular da conta:
+    CPF:
+    Banco:
+    Agência:
+    Tipo de Conta:
+    Conta:
 
-Lembrando: A conta para depósito deve ser, obrigatoriamente, no nome do titular da compra, ou seja, o nome do comprador que consta na nota fiscal. NÃO efetuamos depósito em conta de terceiros. Além disso, a conta precisa ser registrada como pessoa física.
-OBS: Importante frisar que os dados bancários enviados para estorno, são responsabilidade do cliente, e caso estes dados estejam incorretos, será acrescido o valor de R$9,00 para reenviar o valor de seu reembolso. Pedimos que os dados sejam conferidos antes de nos encaminhar.
+    Lembrando: A conta para depósito deve ser, obrigatoriamente, no nome do titular da compra, ou seja, o nome do comprador que consta na nota fiscal. NÃO efetuamos depósito em conta de terceiros. Além disso, a conta precisa ser registrada como pessoa física.
+    OBS: Importante frisar que os dados bancários enviados para estorno, são responsabilidade do cliente, e caso estes dados estejam incorretos, será acrescido o valor de R$9,00 para reenviar o valor de seu reembolso. Pedimos que os dados sejam conferidos antes de nos encaminhar.
 
-Aguardamos o envio de suas informações para realizar o estorno do seu pedido.
+    Aguardamos o envio de suas informações para realizar o estorno do seu pedido.
 
-Qualquer dúvida, estamos sempre à disposição!
-Abraço Equipe Appmax.`
+    Qualquer dúvida, estamos sempre à disposição!
+    Abraço Equipe Appmax.`
+  },
+  {
+    name: 'confirmacao-recebimento',
+    keyWords: ['confirmacao', 'recebimento'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME',
+    ],
+    content: ` Olá KEY_WORD_CUSTOMER_FIRSTNAME!
+    Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou te auxiliar neste atendimento! 
+    
+    Verifiquei o código de rastreio referente à sua compra e percebi que consta como entregue! 
+    
+    Gostaria de questionar a você se já recebeu seu produto?
+    
+    Caso sim, lhe desejamos um ótimo uso deste! 
+    Ficamos a sua disposição.
+    Atendimento Appmax <3
+  `
+  },
+  {
+    name: 'comprovante-estorno-cartao',
+    keyWords: ['comprovante', 'estorno'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME',
+    ],
+    content: ` Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem?
+
+     Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e vou te auxiliar neste atendimento.
+    
+    Conforme combinado, informamos que foi solicitado o estorno de sua compra para administradora do seu cartão de crédito, conforme o comprovante em anexo.
+    Lembramos que o estorno poderá ser visualizado no mesmo cartão utilizado na compra em forma de crédito, em uma ou duas faturas subsequentes.
+    
+    Esperamos que em breve você tenha uma nova experiência boa conosco, e qualquer dúvida, permanecemos a sua disposição.
+    
+    Um abraço! <3
+    Atendimento Appmax
+  `
+  },
+  {
+    name: 'comprovante-estorno-boleto',
+    keyWords: ['comprovante', 'estorno', 'boleto'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME',
+    ],
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem?
+
+    Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou te auxiliar neste atendimento! 
+    
+    
+    Conforme o combinado, informo que foi solicitado o estorno de sua compra realizada através de boleto bancário.
+    Anexo aqui o comprovante de transferência bancária referente ao valor do seu pedido.
+    
+    
+    Esperamos que em breve você tenha uma nova experiência boa conosco, e qualquer dúvida, permanecemos a sua disposição.
+    Um abraço! <3 
+    Atendimento Appmax
+  `
+  },
+  {
+    name: 'parceiro-nao-respondeu-masculino',
+    keyWords: ['nao', 'respondeu'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME',
+      'KEY_WORD_PARTNER_NAME'
+    ],
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?
+    
+    Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou te auxiliar neste atendimento! 
+    
+    Lamento em saber que a situação com a empresa vendedora KEY_WORD_PARTNER_NAME não se resolveu como você gostaria. Mas conforme o combinado, caso você não fosse atendido devidamente, nós da Appmax, tomaríamos uma medida de ação, a fim de resolver o problema.
+    Com isso, venho lhe propor a opção de estorno de sua compra, caso tenha interesse, sendo assim, peço que sinalize em resposta deste email se você prefere o estorno ou aguardar pelo produto.
+     
+    
+    Peço que responda este email em até 48 horas.
+
+    SELECIONE DE ACORDO COM A FORMA DE PAGAMENTO DO CLIENTE
+
+    Como sua compra foi feita no cartão de crédito, o estorno poderá ser visualizado no mesmo cartão que foi utilizado, em uma ou duas faturas subsequentes.
+
+    Como sua compra foi realizada através de boleto, o prazo para estorno é de até 10 dias úteis, após o recebimento de seus dados bancários.    
+    
+    Aguardamos seu retorno!    
+    Espero que em breve você tenha uma nova experiência boa conosco, e qualquer dúvida, permaneço a sua disposição. Nossa resposta deve ocorrer em até 5 dias úteis.
+
+    Um abraço!
+  `
+  },
+  {
+    name: 'parceiro-nao-respondeu-feminino',
+    keyWords: ['nao', 'respondeu'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME',
+      'KEY_WORD_PARTNER_NAME'
+    ],
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?
+    
+    Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou te auxiliar neste atendimento! 
+    
+    Lamento em saber que a situação com a empresa vendedora KEY_WORD_PARTNER_NAME não se resolveu como você gostaria. Mas conforme o combinado, caso você não fosse atendida devidamente, nós da Appmax, tomaríamos uma medida de ação, a fim de resolver o problema.
+    Com isso, venho lhe propor a opção de estorno de sua compra, caso tenha interesse, sendo assim, peço que sinalize em resposta deste email se você prefere o estorno ou aguardar pelo produto.
+         
+    Peço que responda este email em até 48 horas.
+
+    SELECIONE DE ACORDO COM A FORMA DE PAGAMENTO DO CLIENTE
+
+    Como sua compra foi feita no cartão de crédito, o estorno poderá ser visualizado no mesmo cartão que foi utilizado, em uma ou duas faturas subsequentes.
+
+    Como sua compra foi realizada através de boleto, o prazo para estorno é de até 10 dias úteis, após o recebimento de seus dados bancários.    
+    
+    Aguardamos seu retorno!    
+    Espero que em breve você tenha uma nova experiência boa conosco, e qualquer dúvida, permaneço a sua disposição. Nossa resposta deve ocorrer em até 5 dias úteis.
+
+    Um abraço!
+  `
+  },
+  {
+    name: 'boleto-pendente',
+    keyWords: ['boleto', 'pendente'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME',
+      'KEY_WORD_PARTNER_EMAIL',
+      'KEY_WORD_PARTNER_NAME'
+    ],
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?
+    Me chamo KEY_WORD_USER_NAME, faço parte do time de atendimento da APPMAX e irei auxiliar em seu atendimento!
+     
+    Primeiramente, informo que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário. Assim, a empresa APPMAX somente intermediou a compra feita por você e o estabelecimento vendedor.
+     
+    A empresa que lhe vendeu o produto chama-se KEY_WORD_PARTNER_NAME, ela é a responsável em lhe fornecer todos as informações sobre a sua compra, como a emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda. Você deve contatá-los diretamente através dos dados abaixo: 
+    
+    E-mail do suporte: KEY_WORD_PARTNER_EMAIL
+    
+    
+    Seu pagamento consta como pendente, informo que o pagamento do boleto pode ser realizado em qualquer banco ou lotérica até a data do vencimento. Após o vencimento, ele tem validade de 30 dias uteis podendo ser pago no Itaú.
+    Caso não tenha mais interesse no produto, é só desconsiderar a cobrança.
+    
+    Espero ter tirado todas as suas dúvidas e que em breve você tenha uma nova experiência conosco!
+    Logo você receberá um e-mail automático solicitando a sua avaliação em relação ao meu atendimento. É só escolher uma nota de 0 a 10 podendo também deixar algum comentário. O seu feedback é muito importante para mim ❤
+     
+    Um abraço!
+    Atendimento Appmax`
   },
 ]
