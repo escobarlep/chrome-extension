@@ -16,36 +16,27 @@ export default {
     const partner = this._data
     return `
       <div class="row">
-        <fieldset>
-          <legend>Parceiro</legend>
-          <div class="col s12">
-            <label for="partner-name">Razão Social</label>
-            <input id="partner-name" type="text" value="${partner.name}">
-          </div>
-          <div class="col s6">
-            <label for="partner-cnpj">CNPJ</label>
-            <input id="partner-cnpj" type="text" value="${partner.cnpj}">
-          </div>
-          <div class="col s6">
-            <label for="partner-phone">Contato</label>
-            <input id="partner-phone" type="text" value="${partner.phone}">
-          </div>
-          <div class="col s8">
-            <label for="partner-email">Email</label>
-            <input id="partner-email" type="email" value="${partner.email}">
-          </div>
-          <div class="col s4">
-            <label for="partner-site">Site</label>
-            <input id="partner-site" type="text" value="${partner.site}">
-          </div>
-          <div class="col s12">
-            <div class="center">
-              <button id="btn-collect-partner" class="waves-effect waves-light btn indigo darken-4">Coletar</button>
-              <button id="btn-update-partner" class="waves-effect waves-light btn indigo darken-4">Atualizar</button>
-              <button id="btn-clear-partner" class="waves-effect waves-light btn indigo darken-4">Limpar Dados</button>
-            </div>
-          </div>
-        </fieldset>
+        <p class="center"><b>Parceiro</b></p>
+        <div class="center center-align">
+          <i id="btn-collect-partner" style="cursor:pointer" class="tiny material-icons waves-effect waves-light indigo darken-4 btn-floating">content_copy</i>
+          <i id="btn-update-partner" style="cursor:pointer" class="tiny material-icons waves-effect waves-light green darken-4 btn-floating">save</i>
+          <i id="btn-clear-partner" style="cursor:pointer" class="tiny material-icons waves-effect waves-light red darken-4 btn-floating">clear</i>
+        </div>
+        <div class="col s12">
+          <input placeholder="Razão Social" id="partner-name" type="text" value="${partner.name}">
+        </div>
+        <div class="col s12">
+          <input placeholder="CNPJ" id="partner-cnpj" type="text" value="${partner.cnpj}">
+        </div>
+        <div class="col s12">
+          <input placeholder="Contato" id="partner-phone" type="text" value="${partner.phone}">
+        </div>
+        <div class="col s12">
+          <input placeholder="Email" id="partner-email" type="email" value="${partner.email}">
+        </div>
+        <div class="col s12">
+          <input placeholder="Site" id="partner-site" type="text" value="${partner.site}">
+        </div>
       </div>`
   }
 }

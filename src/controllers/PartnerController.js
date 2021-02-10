@@ -1,4 +1,3 @@
-'use strict'
 import PartnerFormView from '/src/views/PartnerFormView.js'
 import PartnerRepository from '/src/repositories/PartnerRepository.js'
 import CustomerRepository from '/src/repositories/CustomerRepository.js'

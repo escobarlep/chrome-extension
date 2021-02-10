@@ -17,40 +17,30 @@ export default {
     const customer = this._data
     return `
       <div class="row">
-        <fieldset>
-          <legend>Cliente</legend>
-          <div class="col s8">
-            <label for="customer-name">Nome</label>
-            <input id="customer-name" type="text" value="${customer.name}">
-          </div>
-          <div class="col s4">
-            <label for="customer-cpf">CPF</label>
-            <input id="customer-cpf" type="text" value="${customer.cpf}">
-          </div>
-          <div class="col s6">
-            <label for="customer-email">Email</label>
-            <input id="customer-email" type="email" value="${customer.email}">
-          </div>
-          <div class="col s6">
-            <label for="customer-order">Nº Pedido</label>
-            <input id="customer-order" type="text" value="${customer.order}">
-          </div>
-          <div class="col s6">
-            <label for="customer-tracking">Nº de rastreio</label>
-            <input id="customer-tracking" type="text" value="${customer.tracking}">
-          </div>
-          <div class="col s6">
-            <label for="customer-tracking-status">Status de rastreio</label>
-            <input id="customer-tracking-status" type="text" value="${customer.trackingStatus}">
-          </div>
-          <div class="input-field col s12">
-            <div class="center">
-              <button id="btn-collect-customer" class="waves-effect waves-light btn indigo darken-4">Coletar</button>
-              <button id="btn-update-customer" class="waves-effect waves-light btn indigo darken-4">Atualizar</button>
-              <button id="btn-clear-customer" class="waves-effect waves-light btn indigo darken-4">Limpar</button>
-            </div>
-          </div>
-        </fieldset>
+        <p class="center"><b>Cliente</b></p>
+        <div class="center center-align">
+          <i id="btn-collect-customer" style="cursor:pointer" class="tiny material-icons waves-effect waves-light indigo darken-4 btn-floating">content_copy</i>
+          <i id="btn-update-customer" style="cursor:pointer" class="tiny material-icons waves-effect waves-light green darken-4 btn-floating">save</i>
+          <i id="btn-clear-customer" style="cursor:pointer" class="tiny material-icons waves-effect waves-light red darken-4 btn-floating">clear</i>
+        </div>
+        <div class="col s12">
+          <input placeholder="Nome" id="customer-name" type="text" value="${customer.name}">
+        </div>
+        <div class="col s12">
+          <input placeholder="CPF" id="customer-cpf" type="text" value="${customer.cpf}">
+        </div>
+        <div class="col s12">
+          <input placeholder="Email" id="customer-email" type="email" value="${customer.email}">
+        </div>
+        <div class="col s12">
+          <input placeholder="Nº Pedido" id="customer-order" type="text" value="${customer.order}">
+        </div>
+        <div class="col s12">
+          <input placeholder="Nº de rastreio" id="customer-tracking" type="text" value="${customer.tracking}">
+        </div>
+        <div class="col s12">
+          <input placeholder="Status de rastreio" id="customer-tracking-status" type="text" value="${customer.trackingStatus}">
+        </div>
       </div>`
   }
 }
