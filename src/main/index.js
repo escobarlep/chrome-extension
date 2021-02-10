@@ -49,6 +49,13 @@ function collectCustomer() {
     var site = elementSite[1].innerText
     site = site ? site.replace('Site:', '').trim() : ''
     window.localStorage.setItem('app-max-site', site)
+    var textArea = document.createElement('textArea')
+    textArea.type = 'hidden'
+    textArea.innerText = site
+    document.body.appendChild(textArea)
+    textArea.select()
+    document.execCommand('copy')
+    document.body.removeChild(textArea)
   }
 
   return customer

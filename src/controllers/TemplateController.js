@@ -69,8 +69,6 @@ export default {
     this._mapKeyWords.set('KEY_WORD_CUSTOMER_ORDER', customer.order)
     this._mapKeyWords.set('KEY_WORD_CUSTOMER_TRACKING', customer.tracking)
     this._mapKeyWords.set('KEY_WORD_CUSTOMER_TRACKING_STATUS', customer.trackingStatus)
-
-
   },
   activateButtonForDetail: function() {
     const templateButtons = this.mainApp.document.querySelectorAll('.find-template')
