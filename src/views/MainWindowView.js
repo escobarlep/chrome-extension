@@ -1,12 +1,13 @@
 export default {
   id: '#app',
+  idContent: 'nav-main-content',
+  idLogOut: 'user-logout',
+  title: '<a href="#" class="brand-logo">Maxter CX</a>',
   template: function() {
     return `
       <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Maxter CX</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-          </ul>
+        <div id='nav-main-content' class="nav-wrapper">
+          ${this.title}
         </div>
       </nav>
       <div class="row">

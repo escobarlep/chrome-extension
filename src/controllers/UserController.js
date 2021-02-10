@@ -1,10 +1,11 @@
-'use strict'
 import UserRepository from '/src/repositories/UserRepository.js'
 import UserFormView from '/src/views/UserFormView.js'
+import MainWindowView from '/src/views/MainWindowView.js'
 
 export default {
   _repo: UserRepository,
   view: UserFormView,
+  viewMain: MainWindowView,
 
   initializer: function(mainApp){
     this._mainApp = mainApp
@@ -20,19 +21,36 @@ export default {
   },
 
   updateView: function(){
-    this.view.setData(this._repo.getName())
-    this._mainApp.renderView(this.view)
+    this.renderView()
+  },
+  renderView: function (params) {
+    const user = this._repo.getName()
+    this.view.setData(user)
+    const registerView = this._mainApp.document.querySelector(this.view.id)
+    const nav = this._mainApp.document.getElementById(this.viewMain.idContent)
+    if (user) {
+      registerView.hidden = true
+      nav.innerHTML += this.view.template()
+    } else {
+      registerView.hidden = false
+      nav.innerHTML = this.viewMain.title
+      this._mainApp.renderView(this.view)
+    }
     this._activateViewListeners()
   },
-
   clearView: function(){
     this._repo.clearName()
     this.updateView()
   },
 
   _activateViewListeners: function() {
-    const buttonRegister = this._mainApp.document.getElementById(this.view.idBtnUserRegister)
-    const buttonChange = this._mainApp.document.getElementById(this.view.idBtnUserChangeRegister)
+    const M = this._mainApp.fwCssManager
+    const doc = this._mainApp.document
+    const elems = doc.querySelectorAll('.dropdown-trigger')
+    M.Dropdown.init(elems)
+
+    const buttonRegister = doc.getElementById(this.view.idBtnUserRegister)
+    const buttonChange = doc.getElementById(this.viewMain.idLogOut)
     const bindCallRemoveName = this.clearView.bind(this)
     const bindCallUpdateDataFromView = this.collectAndUpdateFromView.bind(this)
     const bindCallUpdateView = this.updateView.bind(this)
@@ -48,5 +66,5 @@ export default {
         bindCallUpdateView()
       })
     }
-  },
+  }
 }
