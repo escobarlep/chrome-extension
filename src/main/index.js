@@ -24,7 +24,6 @@ function collectCustomer() {
   var order = ''
   var orderElement = document.getElementsByTagName('H1')
   order = orderElement[0].innerText.slice(8, orderElement[0].length)
-  console.log(order)
   if (order.length !== 7) {
     orderElement = document.getElementsByClassName(' text-right');
     order = orderElement[0].innerText.trim()
@@ -43,7 +42,6 @@ function collectCustomer() {
 
   var tracking = document.getElementById('trackingCode')
   customer.tracking = tracking ? tracking.value.trim() : ''
-  console.log(customer)
   
   var elementSite = document.querySelectorAll('.box-header.with-border strong')
 

@@ -18,8 +18,6 @@ export default {
       </div>
       <div class="row">
         <div id="template-list-view" class="row"></div>
-      </div>
-      
-    `
+      </div>`
   }
 }
