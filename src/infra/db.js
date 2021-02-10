@@ -646,4 +646,38 @@ Logo você receberá um e-mail automático solicitando a sua avaliação em rela
 Um abraço!
 Atendimento Appmax`
   },
+  {
+    name: 'devolucao-parceiro',
+    keyWords: ['devolucao', 'parceiro'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME',
+      'KEY_WORD_PARTNER_EMAIL',
+      'KEY_WORD_PARTNER_NAME'
+    ],
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!
+Tudo bem com você?
+  
+Me chamo KEY_WORD_USER_NAME, faço parte do time de Suporte ao Cliente da APPMAX e irei auxiliar em seu atendimento.
+  
+Primeiramente, peço desculpas pelo transtorno causado!
+  
+Ressalvo que a Appmax apenas realiza o intermédio do contato entre você cliente e a loja que lhe vendeu o produto.
+  
+Como forma de solucionar o seu problema, indico o contato da empresa vendedora para o seu melhor atendimento e a mesma segue em cópia em e-mails trocados.
+  
+E-mail do suporte: KEY_WORD_PARTNER_EMAIL
+  
+Espero que junto à eles seja possível esclarecer todas as suas dúvidas e solucionar quaisquer situações.
+_____________
+  
+KEY_WORD_PARTNER_NAME
+  
+Visto que o cliente está insatisfeito com a sua compra, estou solicitando novamente que o suporte necessário seja prestado a ele. Pode verificar, por favor?
+  
+Espero ter ajudado e fico à disposição para o que for necessário!
+  
+Um abraço!
+Atendimento Appmax`
+  },
 ]
