@@ -6,6 +6,8 @@ import CustomerController from '/src/controllers/CustomerController.js'
 import PartnerController from '/src/controllers/PartnerController.js'
 
 function collectCustomer() {
+  window.localStorage.removeItem('app-max-order-status')
+  window.localStorage.removeItem('app-max-site')
   var url = window.location.href
     .replace('https://', '')
     .split('/')[0]
@@ -58,6 +60,42 @@ function collectCustomer() {
     document.body.removeChild(textArea)
   }
 
+  if (customer.tracking) {
+    fetch('https://api-track.ebanx.com/production/track', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8'
+      },
+      body: JSON.stringify({
+        "trackingCode": customer.tracking,
+        "locale":"pt"
+      })
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (!res.length) return 
+        var trackingResult = res[0]
+        if ( !'checkpoints' in trackingResult ) return
+        var { checkpoints } = trackingResult
+        if ( !checkpoints.length ) return
+        var currentCheckpoint = {}
+        checkpoints.forEach(checkpoint => {
+          if (!currentCheckpoint.length) {
+            currentCheckpoint = checkpoint
+          } else {
+            var currentDate = new Date(currentCheckpoint.date)
+            if (currentDate < (new Date(checkpoint.date))) currentCheckpoint = checkpoint
+          }
+        })
+        var newDate = new Date(currentCheckpoint.date)
+        var formatedDate = (new Intl.DateTimeFormat('pt-br')).format(newDate)
+        var description = currentCheckpoint.description.replace(/^/, `${formatedDate} - `)
+        window.localStorage.setItem('app-max-order-status', description)
+      })
+      .catch(err => console.log('mail API integration failed', err))
+  }
+
   return customer
 }
 
@@ -69,6 +107,7 @@ function collectPartner() {
   var partner = {}
 
   if (!url || !appMaxRegex.test(url)) return partner
+  var trackingStatus = window.localStorage.getItem('app-max-order-status')
 
   partner.site = window.localStorage.getItem('app-max-site')
   var tbody = document.querySelector('div.box-body div.table-responsive tbody')
@@ -90,7 +129,7 @@ function collectPartner() {
 
   if (!partner.email) partner.email = listTDs[5].innerText
 
-  return partner
+  return { partner, trackingStatus }
 }
 
 App.setStorage(window.localStorage)
