@@ -102,7 +102,8 @@ Um abraço, equipe Appmax!`
       'KEY_WORD_PARTNER_EMAIL',
       'KEY_WORD_PARTNER_NAME',
       'KEY_WORD_CUSTOMER_FIRSTNAME',
-      'KEY_WORD_CUSTOMER_TRACKING'
+      'KEY_WORD_CUSTOMER_TRACKING',
+      'KEY_WORD_CUSTOMER_STATUSTRACKING',
     ],
     content: `Olá, KEY_WORD_CUSTOMER_FIRSTNAME!
   
@@ -113,7 +114,7 @@ Entendi sua solicitação e gostaria de esclarecer que a APPMAX é uma plataform
 Porém a empresa KEY_WORD_PARTNER_NAME disponibilizou essa informação em nosso sistema.
   
 Para consultar o status de entrega do seu pedido é necessário colocar o código de rastreio KEY_WORD_CUSTOMER_TRACKING no site dos correios https://www2.correios.com.br/sistemas/rastreamento/resultado.cfm.
-  
+KEY_WORD_CUSTOMER_STATUSTRACKING
 Caso você precise de outras informações, ressalto que a empresa KEY_WORD_PARTNER_NAME é responsável por todas as informações sobre a sua compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda. Você deve contatá-los diretamente através dos dados abaixo:
   
 E-mail do suporte: KEY_WORD_PARTNER_EMAIL

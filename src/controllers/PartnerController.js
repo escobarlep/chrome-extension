@@ -1,6 +1,7 @@
 'use strict'
 import PartnerFormView from '/src/views/PartnerFormView.js'
 import PartnerRepository from '/src/repositories/PartnerRepository.js'
+import CustomerRepository from '/src/repositories/CustomerRepository.js'
 
 export default {
   _repo: PartnerRepository,
@@ -50,7 +51,9 @@ export default {
     const bindedCallClear = this.clearView.bind(this)
     const bindedCollect = this.collectAndSaveData.bind(this)
     const bindedCallback = this._callback
-
+    CustomerRepository.setStorage(this._mainApp.storage)
+    const bindedCustomerRepositoryUpdate = CustomerRepository.update.bind(CustomerRepository)
+    
     btnUpdate.addEventListener('click', function() {
       bindedCallUpdate()
     })
@@ -60,8 +63,9 @@ export default {
     btnCollect.addEventListener('click', function() {
       chrome.tabs.executeScript({ code: '(' + bindedCallback + ')()' }, 
         (results) => {
-        const partner = results[0]
+        const { partner, trackingStatus } = results[0]
         bindedCollect(partner)
+        if (trackingStatus) bindedCustomerRepositoryUpdate({ trackingStatus })
       })
     })
   }
