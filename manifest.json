@@ -9,6 +9,10 @@
     "default_popup": "src/public/index.html",
     "default_icon": "favicon.png"
   },
+  "background": {
+    "scripts": ["src/main/background.js"],
+    "persistent": false
+  },
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {

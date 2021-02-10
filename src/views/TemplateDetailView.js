@@ -16,7 +16,7 @@ export default {
         </div>`
     }
 
-    return '<div class="row"> <p> TEMPLATE NÃO ENCONTRADO </p></div>'
+    return '<div class="row"><p class="red-text"> TEMPLATES NÃO ENCONTRADOS <i class="material-icons red-text">error</i></p></div>'
   },
   postRender: function(dom) {
     const textArea = dom.querySelector('#copy-and-paste')
@@ -25,8 +25,5 @@ export default {
     dom.execCommand('copy');
     textArea.hidden=true
     alert.hidden=false
-    //const button = dom.querySelector('#copy-and-paste-button')
-    //button.addEventListener('click', () => {
-    //})
   }
 }

@@ -9,9 +9,6 @@ function collectCustomer() {
   var url = window.location.href
     .replace('https://', '')
     .split('/')[0]
-  var route = window.location.href
-    .replace('https://', '')
-    .split('/')[1]
   const appMaxRegex = new RegExp('appmax', 'gi')
   var customer = {}
 
@@ -60,28 +57,35 @@ function collectCustomer() {
 }
 
 function collectPartner() {
-  var site = window.localStorage.getItem('app-max-site')
+  var url = window.location.href
+    .replace('https://', '')
+    .split('/')[0]
+  const appMaxRegex = new RegExp('appmax', 'gi')
+  var partner = {}
+
+  if (!url || !appMaxRegex.test(url)) return partner
+
+  partner.site = window.localStorage.getItem('app-max-site')
   var tbody = document.querySelector('div.box-body div.table-responsive tbody')
   var listTDs = tbody.children[0].children
-  var name = listTDs[0].innerText
-  var cnpj = listTDs[4].innerText
-  var phone = listTDs[6].innerText
-  var email
-  if (site) {
+  partner.name = listTDs[0].innerText
+  partner.cnpj = listTDs[4].innerText
+  partner.phone = listTDs[6].innerText
+  if (partner.site) {
     var suppContact = document.querySelectorAll('.modal-body table tr')
     if (suppContact.length) {
       for (var th of suppContact) {
         var thisSite = th.children[0].innerText
-        if (thisSite.trim().toUpperCase() === site.toUpperCase()) {
-          email = th.children[2].innerText
+        if (thisSite.trim().toUpperCase() === partner.site.toUpperCase()) {
+          partner.email = th.children[2].innerText
         }
       }
     }
   }
 
-  if (!email) email = listTDs[5].innerText
+  if (!partner.email) partner.email = listTDs[5].innerText
 
-  return { name, cnpj, phone, email, site}
+  return partner
 }
 
 App.setStorage(window.localStorage)

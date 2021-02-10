@@ -1,5 +1,3 @@
-'use strict'
-
 export default {
   id: '#app',
   template: function() {
@@ -21,12 +19,7 @@ export default {
       <div class="row">
         <div id="template-list-view" class="row"></div>
       </div>
-      <div class="row">
-        <div id="div-log" class="row"></div>
-      </div>
+      
     `
   }
 }
-
-// Razão Social
-// Email

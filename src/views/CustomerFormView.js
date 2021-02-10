@@ -1,5 +1,3 @@
-'use strict'
-
 export default {
   id: '#customer-data',
   _data: {},
@@ -53,7 +51,6 @@ export default {
             </div>
           </div>
         </fieldset>
-      </div>
-    `
+      </div>`
   }
 }

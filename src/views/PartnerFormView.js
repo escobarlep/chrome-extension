@@ -1,5 +1,3 @@
-'use strict'
-
 export default {
   id: '#partner-data',
   _data: {},
@@ -20,27 +18,27 @@ export default {
       <div class="row">
         <fieldset>
           <legend>Parceiro</legend>
-          <div class="input-field col s12">
-            <input id="partner-name" type="text" value="${partner.name}">
+          <div class="col s12">
             <label for="partner-name">Razão Social</label>
+            <input id="partner-name" type="text" value="${partner.name}">
           </div>
-          <div class="input-field col s6">
-            <input id="partner-cnpj" type="text" value="${partner.cnpj}">
+          <div class="col s6">
             <label for="partner-cnpj">CNPJ</label>
+            <input id="partner-cnpj" type="text" value="${partner.cnpj}">
           </div>
-          <div class="input-field col s6">
-            <input id="partner-phone" type="text" value="${partner.phone}">
+          <div class="col s6">
             <label for="partner-phone">Contato</label>
+            <input id="partner-phone" type="text" value="${partner.phone}">
           </div>
-          <div class="input-field col s8">
-            <input id="partner-email" type="email" value="${partner.email}">
+          <div class="col s8">
             <label for="partner-email">Email</label>
+            <input id="partner-email" type="email" value="${partner.email}">
           </div>
-          <div class="input-field col s4">
-            <input id="partner-site" type="text" value="${partner.site}">
+          <div class="col s4">
             <label for="partner-site">Site</label>
+            <input id="partner-site" type="text" value="${partner.site}">
           </div>
-          <div class="input-field col s12">
+          <div class="col s12">
             <div class="center">
               <button id="btn-collect-partner" class="waves-effect waves-light btn indigo darken-4">Coletar</button>
               <button id="btn-update-partner" class="waves-effect waves-light btn indigo darken-4">Atualizar</button>
@@ -48,7 +46,6 @@ export default {
             </div>
           </div>
         </fieldset>
-      </div>
-    `
+      </div>`
   }
 }

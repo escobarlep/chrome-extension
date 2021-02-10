@@ -26,8 +26,8 @@ export default {
         </div>
       `
     }
-
-    return '<div class="row"> <p> TEMPLATES NÃO ENCONTRADOS </p></div>'
+    
+    return '<div class="row"><p class="red-text"> TEMPLATES NÃO ENCONTRADOS <i class="material-icons red-text">error</i></p></div>'
   },
   _activateSearch: function(dom) {
     var inputSearch = dom.querySelector('#search-templ')
@@ -42,13 +42,6 @@ export default {
       })
     })
   },
-  // _activateButton: function(dom) {
-  //   const templateButtons = dom.querySelectorAll('.find-template')
-
-  //   templateButtons.forEach(function(button) {
-  //     button.addEventListener('click', TemplateController.showDetail)
-  //   })
-  // },
   postRender: function(dom) {
     this._activateSearch(dom)
   }
