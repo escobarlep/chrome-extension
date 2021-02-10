@@ -4,6 +4,9 @@ export default {
   setStorage: function(storage) {
     this.storage = storage
   },
+  setCssFramework: function(M) {
+    this.fwCssManager = M
+  },
   setDocument: function(doc) {
     this.document = doc
   },

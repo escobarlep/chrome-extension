@@ -134,6 +134,7 @@ function collectPartner() {
 
 App.setStorage(window.localStorage)
 App.setDocument(window.document)
+App.setCssFramework(window.M)
 App.initialSetUp()
 App.renderView(MainWindowView)
 
