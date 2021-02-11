@@ -18,9 +18,9 @@ export default {
       <div class="row">
         <p class="center"><b>Parceiro</b></p>
         <div class="center center-align">
-          <i id="btn-collect-partner" style="cursor:pointer" data-position="bottom" data-tooltip="Coleta dados do Parceiro" class="tooltipped tiny material-icons waves-effect waves-light indigo darken-4 btn-floating">content_copy</i>
-          <i id="btn-update-partner" style="cursor:pointer"  data-position="bottom" data-tooltip="Salva alterações nos dados do Parceiro" class="tooltipped tiny material-icons waves-effect waves-light green darken-4 btn-floating">save</i>
-          <i id="btn-clear-partner" style="cursor:pointer" data-position="bottom" data-tooltip="Limpar dados do Parceiro" class="tooltipped tiny material-icons waves-effect waves-light red darken-4 btn-floating">clear</i>
+          <i id="btn-collect-partner" style="cursor:pointer" class="tiny material-icons waves-effect waves-light blue-appmax btn-floating">content_copy</i>
+          <i id="btn-update-partner" style="cursor:pointer" class="tiny material-icons waves-effect waves-light green-appmax btn-floating">save</i>
+          <i id="btn-clear-partner" style="cursor:pointer" class="tiny material-icons waves-effect waves-light red darken-4 btn-floating">clear</i>
         </div>
         <div class="col s12">
           <input placeholder="Razão Social" id="partner-name" type="text" value="${partner.name}">

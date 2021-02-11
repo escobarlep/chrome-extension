@@ -4,8 +4,15 @@ body {
 }
 
 /* overrides */
+.green-appmax {
+  background-color: #00a65a;
+}
+.blue-appmax {
+  background-color: #00acd6;
+}
+
 .nav-wrapper {
-  background-color: #000066 !important;
+  background-color: #222d32 !important;
   color: white !important;
 }
 input[type=text]:not(.browser-default):focus:not([readonly]) + label {
