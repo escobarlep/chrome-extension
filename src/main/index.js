@@ -6,16 +6,19 @@ import CustomerController from '/src/controllers/CustomerController.js'
 import PartnerController from '/src/controllers/PartnerController.js'
 
 function collectCustomer() {
+  
+  var fullUrl = window.location.href
+    .replace('https://', '')
+    .split('/')
+  var url = fullUrl[0]
+  var domain = fullUrl[1]
+  const appMaxUrl = new RegExp('appmax', 'gi')
+  const appMaxCustomerDomain = new RegExp('order', 'gi')
+  if (!url || !appMaxUrl.test(url) || !appMaxCustomerDomain.test(domain)) return false
+  
   window.localStorage.removeItem('app-max-order-status')
   window.localStorage.removeItem('app-max-site')
-  var url = window.location.href
-    .replace('https://', '')
-    .split('/')[0]
-  const appMaxRegex = new RegExp('appmax', 'gi')
-  var customer = {}
-
-  if (!url || !appMaxRegex.test(url)) return customer
-  
+  var customer = {}  
   var elementForUser = document.getElementsByClassName('username')
   var text = elementForUser.length ? elementForUser[0].innerText : []
   var searchForNameByIndex = text.lastIndexOf('#')
@@ -100,16 +103,18 @@ function collectCustomer() {
 }
 
 function collectPartner() {
-  var url = window.location.href
+  var fullUrl = window.location.href
     .replace('https://', '')
-    .split('/')[0]
-  const appMaxRegex = new RegExp('appmax', 'gi')
+    .split('/')
+  var url = fullUrl[0]
+  var domain = fullUrl[1]
+  const appMaxUrl = new RegExp('appmax', 'gi')
+  const appMaxPartnerDomain = new RegExp('companies', 'gi')
+
+  if (!url || !appMaxUrl.test(url) || !appMaxPartnerDomain.test(domain)) return false
   var partner = {}
-
-  if (!url || !appMaxRegex.test(url)) return partner
-  var trackingStatus = window.localStorage.getItem('app-max-order-status')
-
   partner.site = window.localStorage.getItem('app-max-site')
+  partner.site = partner.site ? partner.site : ''
   var tbody = document.querySelector('div.box-body div.table-responsive tbody')
   var listTDs = tbody.children[0].children
   partner.name = listTDs[0].innerText
@@ -129,7 +134,13 @@ function collectPartner() {
 
   if (!partner.email) partner.email = listTDs[5].innerText
 
-  return { partner, trackingStatus }
+  return partner
+}
+
+function getTrackingData() {
+  var trackingStatus = window.localStorage.getItem('app-max-order-status')
+  if (!trackingStatus) return false
+  return { trackingStatus }
 }
 
 App.setStorage(window.localStorage)
@@ -144,7 +155,7 @@ TemplateController.startView()
 App.renderView(TemplateController.view)
 
 UserController.initializer(App)
-CustomerController.initializer(App, collectCustomer)
+CustomerController.initializer(App, {collectCustomer, getTrackingData})
 PartnerController.initializer(App, collectPartner)
 
 TemplateController.activateButtonForDetail()

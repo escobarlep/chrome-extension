@@ -26,8 +26,7 @@ export default {
   update: function(data) {
     const partner = this.getPartner()
     const partnerModel = Object.assign(partner, data)
-    const stringifiedData = JSON.stringify(partnerModel)
-    this.storage.setItem(`${this._prefix}`, stringifiedData)
+    this.storage.setItem(`${this._prefix}`, JSON.stringify(partnerModel))
   },
   getPartner: function() {
     const data = this.storage.getItem(`${this._prefix}`)

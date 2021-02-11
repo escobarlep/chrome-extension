@@ -1,6 +1,5 @@
 import PartnerFormView from '/src/views/PartnerFormView.js'
 import PartnerRepository from '/src/repositories/PartnerRepository.js'
-import CustomerRepository from '/src/repositories/CustomerRepository.js'
 
 export default {
   _repo: PartnerRepository,
@@ -9,7 +8,7 @@ export default {
     this._mainApp = mainApp
     this._callback = callback
     this._repo.setStorage(this._mainApp.storage)
-    this.updateView(callback)
+    this.updateView()
   },
   collectFromView: function(id){
     const data = this._mainApp.document.getElementById(id)
@@ -37,16 +36,12 @@ export default {
     this._repo.clearPartner()
     this.updateView()
   },
-  updateView: function(callback){
+  updateView: function(){
     this.view.setData(this._repo.getPartner())
     this._mainApp.renderView(this.view)
-    this._activateViewListeners(callback)
+    this._activateViewListeners()
   },
   _activateViewListeners: function(){
-    const doc = this._mainApp.document
-    const elems = doc.querySelectorAll('.tooltipped')
-    this._mainApp.fwCssManager.Tooltip.init(elems)
-
     const btnUpdate = this._mainApp.document.getElementById(this.view.idBtnUpdatePartner)
     const btnClear = this._mainApp.document.getElementById(this.view.idBtnClear)
     const btnCollect = this._mainApp.document.getElementById(this.view.idBtnCollect)
@@ -54,8 +49,6 @@ export default {
     const bindedCallClear = this.clearView.bind(this)
     const bindedCollect = this.collectAndSaveData.bind(this)
     const bindedCallback = this._callback
-    CustomerRepository.setStorage(this._mainApp.storage)
-    const bindedCustomerRepositoryUpdate = CustomerRepository.update.bind(CustomerRepository)
     
     btnUpdate.addEventListener('click', function() {
       bindedCallUpdate()
@@ -64,12 +57,12 @@ export default {
       bindedCallClear()
     })
     btnCollect.addEventListener('click', function() {
-      chrome.tabs.executeScript({ code: '(' + bindedCallback + ')()' }, 
-        (results) => {
-        const { partner, trackingStatus } = results[0]
-        bindedCollect(partner)
-        if (trackingStatus) bindedCustomerRepositoryUpdate({ trackingStatus })
-      })
+      chrome.tabs.executeScript(
+        { code: '(' + bindedCallback + ')()' }, 
+        ([partner]) => {
+          if (partner) bindedCollect(partner)
+        }
+      )
     })
   }
 }

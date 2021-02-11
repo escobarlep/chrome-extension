@@ -25,10 +25,9 @@ export default {
     return customerModel
   },
   update: function(data) {
-    const customer = this.getCustomer()
-    const customerModel = Object.assign(customer, data)
-    const stringifiedData = JSON.stringify(customerModel)
-    this.storage.setItem(`${this._prefix}`, stringifiedData)
+    const customerFromDB = this.getCustomer()
+    const customerModel = Object.assign(customerFromDB, data)
+    this.storage.setItem(`${this._prefix}`, JSON.stringify(customerModel))
   },
   getCustomer: function() {
     let data = this.storage.getItem(`${this._prefix}`)

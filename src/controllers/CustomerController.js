@@ -1,15 +1,16 @@
-'use strict'
 import CustomerFormView from '/src/views/CustomerFormView.js'
 import CustomerRepository from '/src/repositories/CustomerRepository.js'
 
 export default {
   _repo: CustomerRepository,
   view: CustomerFormView,
-  initializer: function(mainApp, callback){
+  initializer: function(mainApp, callbacks){
     this._mainApp = mainApp
-    this._callback = callback
+    this._collectDataFromWeb = callbacks.collectCustomer
+    this._collectDataFromWebTracking = callbacks.getTrackingData
+    
     this._repo.setStorage(this._mainApp.storage)
-    this.updateView(callback)
+    this.updateView()
   },
   collectFromView: function(id){
     const data = this._mainApp.document.getElementById(id)
@@ -19,6 +20,10 @@ export default {
   },
   collectAndSaveData: function(data){
     this._repo.save(data)
+    this.updateView()
+  },
+  collectAndUpdateData: function(data){
+    this._repo.update(data)
     this.updateView()
   },
   updateCustomerFromView: function(){
@@ -38,23 +43,21 @@ export default {
     this._repo.clearCustomer()
     this.updateView()
   },
-  updateView: function(callback){
+  updateView: function(){
     this.view.setData(this._repo.getCustomer())
     this._mainApp.renderView(this.view)
-    this._activateViewListeners(callback)
+    this._activateViewListeners()
   },
   _activateViewListeners: function(){
-    const doc = this._mainApp.document
-    const elems = doc.querySelectorAll('.tooltipped')
-    this._mainApp.fwCssManager.Tooltip.init(elems)
-
-    const btnUpdate = doc.getElementById(this.view.idBtnUpdateCustomer)
-    const btnClear = doc.getElementById(this.view.idBtnClear)
-    const btnCollect = doc.getElementById(this.view.idBtnCollect)
+    const btnUpdate = this._mainApp.document.getElementById(this.view.idBtnUpdateCustomer)
+    const btnClear = this._mainApp.document.getElementById(this.view.idBtnClear)
+    const btnCollect = this._mainApp.document.getElementById(this.view.idBtnCollect)
     const bindedCallUpdate = this.updateCustomerFromView.bind(this)
     const bindedCallClear = this.clearView.bind(this)
     const bindedCollect = this.collectAndSaveData.bind(this)
-    const bindedCallback = this._callback
+    const bindedCollectAndUpdate = this.collectAndUpdateData.bind(this)
+    const bindCollectDataFromWeb = this._collectDataFromWeb
+    const bindCollectDataFromWebForTracking = this._collectDataFromWebTracking
     
     btnUpdate.addEventListener('click', function() {
       bindedCallUpdate()
@@ -65,12 +68,20 @@ export default {
     })
 
     btnCollect.addEventListener('click', function() {
-      chrome.tabs.executeScript({ code: '(' + bindedCallback + ')()' }, 
-        (results) => {
-          const customer = results[0]
-          bindedCollect(customer)
+      chrome.tabs.executeScript(
+        { code: '(' + bindCollectDataFromWeb + ')()' },
+        ([customer]) => {
+          if (customer) bindedCollect(customer)
         }
       )
+      setTimeout(() => {
+        chrome.tabs.executeScript(
+          { code: '(' + bindCollectDataFromWebForTracking + ')()' },
+          ([trackingData]) => {
+            if (trackingData) bindedCollectAndUpdate(trackingData)
+          }
+        ) 
+      }, 3000)
     })
   },
 }
