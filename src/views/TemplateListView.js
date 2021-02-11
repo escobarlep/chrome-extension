@@ -10,10 +10,8 @@ export default {
     if (this._data) {
       return `
         <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">search</i>
-            <input type="text" id="search-templ">
-            <label for="search-templ">Pesquisar Templates</label>
+          <div class="col s12">
+            <input placeholder="Pesquisar Templates" type="text" id="search-templ">
           </div>
           <ul class="collection">
             ${ 
@@ -23,8 +21,7 @@ export default {
               }).join('')
             }
           </ul>
-        </div>
-      `
+        </div>`
     }
     
     return '<div class="row"><p class="red-text"> TEMPLATES NÃO ENCONTRADOS <i class="material-icons red-text">error</i></p></div>'

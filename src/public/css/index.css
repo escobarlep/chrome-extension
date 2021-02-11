@@ -1,5 +1,5 @@
 body {
-  font-size: medium;
+  font-size: 14px !important;
   width: 40em;
 }
 
@@ -15,6 +15,8 @@ body {
   background-color: #222d32 !important;
   color: white !important;
 }
-input[type=text]:not(.browser-default):focus:not([readonly]) + label {
-  color: #000066 !important;
+
+input {
+  height: 2rem !important;
+  font-size: 1rem !important;
 }
