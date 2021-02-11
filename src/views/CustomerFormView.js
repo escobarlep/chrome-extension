@@ -19,9 +19,9 @@ export default {
       <div class="row">
         <p class="center"><b>Cliente</b></p>
         <div class="center center-align">
-          <i id="btn-collect-customer" style="cursor:pointer" class="tiny material-icons waves-effect waves-light indigo darken-4 btn-floating">content_copy</i>
-          <i id="btn-update-customer" style="cursor:pointer" class="tiny material-icons waves-effect waves-light green darken-4 btn-floating">save</i>
-          <i id="btn-clear-customer" style="cursor:pointer" class="tiny material-icons waves-effect waves-light red darken-4 btn-floating">clear</i>
+          <i id="btn-collect-customer" style="cursor:pointer"  data-position="bottom" data-tooltip="Coleta dados do Cliente" class="tooltipped tiny material-icons waves-effect waves-light indigo darken-4 btn-floating">content_copy</i>
+          <i id="btn-update-customer" style="cursor:pointer" data-tooltip="Salva alterações nos dados do Cliente" class="tooltipped tiny material-icons waves-effect waves-light green darken-4 btn-floating">save</i>
+          <i id="btn-clear-customer" style="cursor:pointer" data-tooltip="Limpa dados do Cliente" class="tooltipped tiny material-icons waves-effect waves-light red darken-4 btn-floating">clear</i>
         </div>
         <div class="col s12">
           <input placeholder="Nome" id="customer-name" type="text" value="${customer.name}">

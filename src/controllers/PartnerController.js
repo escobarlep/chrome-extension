@@ -43,6 +43,10 @@ export default {
     this._activateViewListeners(callback)
   },
   _activateViewListeners: function(){
+    const doc = this._mainApp.document
+    const elems = doc.querySelectorAll('.tooltipped')
+    this._mainApp.fwCssManager.Tooltip.init(elems)
+
     const btnUpdate = this._mainApp.document.getElementById(this.view.idBtnUpdatePartner)
     const btnClear = this._mainApp.document.getElementById(this.view.idBtnClear)
     const btnCollect = this._mainApp.document.getElementById(this.view.idBtnCollect)

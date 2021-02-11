@@ -44,9 +44,13 @@ export default {
     this._activateViewListeners(callback)
   },
   _activateViewListeners: function(){
-    const btnUpdate = this._mainApp.document.getElementById(this.view.idBtnUpdateCustomer)
-    const btnClear = this._mainApp.document.getElementById(this.view.idBtnClear)
-    const btnCollect = this._mainApp.document.getElementById(this.view.idBtnCollect)
+    const doc = this._mainApp.document
+    const elems = doc.querySelectorAll('.tooltipped')
+    this._mainApp.fwCssManager.Tooltip.init(elems)
+
+    const btnUpdate = doc.getElementById(this.view.idBtnUpdateCustomer)
+    const btnClear = doc.getElementById(this.view.idBtnClear)
+    const btnCollect = doc.getElementById(this.view.idBtnCollect)
     const bindedCallUpdate = this.updateCustomerFromView.bind(this)
     const bindedCallClear = this.clearView.bind(this)
     const bindedCollect = this.collectAndSaveData.bind(this)
