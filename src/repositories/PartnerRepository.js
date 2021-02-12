@@ -5,6 +5,7 @@ const Partner = {
   email: '',
   site: '',
   phone: '',
+  collectedAt: ''
 }
 
 export default {

@@ -17,7 +17,7 @@ export default {
     htmlElement.innerHTML = this._view.template()
     if ('postRender' in this._view) this._view.postRender(this.document)
   },
-  initialSetUp: function() {
+  bootstrap: function() {
     dbSetup(this.storage, this._migrationVersion)
   }
 }

@@ -17,6 +17,7 @@ export default {
     return data.value
   },
   collectAndSaveData: function(data){
+    data.collectedAt = new Date()
     this._repo.save(data)
     this.updateView()
   },

@@ -7,39 +7,44 @@ import TemplateDetailView from '/src/views/TemplateDetailView.js'
 
 export default {
   _mapKeyWords: new Map(),
-  _repository: TemplateRepository,
+  _repo: TemplateRepository,
   _userRepo: UserRepository,
   _customerRepo: CustomerRepository,
   _partnerRepo: PartnerRepository,
   view: TemplateListView,
   viewDetail: TemplateDetailView,
-  setMainApp: function(mainApp){
-    this.mainApp = mainApp
+  initializer: function(mainApp){
+    this._mainApp = mainApp
+    this.setStorage()
+    this.updateView()
   },
-  startView: function(){
+  updateView: function(){
     this.view.setData(this.listAllTemplates())
+    this._mainApp.renderView(this.view)
+    this._activateViewListeners()
   },
   setStorage: function(){
-    this._repository.setStorage(this.mainApp.storage)
-    this._userRepo.setStorage(this.mainApp.storage)
-    this._customerRepo.setStorage(this.mainApp.storage)
-    this._partnerRepo.setStorage(this.mainApp.storage)
+    this._repo.setStorage(this._mainApp.storage)
+    this._userRepo.setStorage(this._mainApp.storage)
+    this._customerRepo.setStorage(this._mainApp.storage)
+    this._partnerRepo.setStorage(this._mainApp.storage)
   },
   listAllTemplates: function() {
-    const allTempls = this._repository.listAllTemplates()
+    const allTempls = this._repo.listAllTemplates()
 
     return allTempls.map(template => {
       return template
-        .replace(this._repository._namePrefix, '')
+        .replace(this._repo.getPrefix(), '')
         .replaceAll('-', ' ')
     })
   },
   showDetail: function(text) {
-    this.setStorage(this.mainApp.storage)
-    const data = this._repository.getByName(text)
+    this.setStorage(this._mainApp.storage)
+    const data = this._repo.getByName(text)
     const template = this.replaceTemplateKeyWords(data)
     this.viewDetail.setData(template)
-    this.mainApp.renderView(this.viewDetail)
+    this._mainApp.renderView(this.viewDetail)
+    this._repo.addHistory(text)
   },
   replaceTemplateKeyWords: function(data) {
     this.updateData()
@@ -81,8 +86,8 @@ Verifiquei que a última atualização apresentaa no site foi: ${status}
     this._mapKeyWords.set('KEY_WORD_CUSTOMER_TRACKING', customer.tracking)
     this._mapKeyWords.set('KEY_WORD_CUSTOMER_STATUSTRACKING', trackingStatus)
   },
-  activateButtonForDetail: function() {
-    const templateButtons = this.mainApp.document.querySelectorAll('.find-template')
+  _activateViewListeners: function() {
+    const templateButtons = this._mainApp.document.querySelectorAll('.find-template')
     const bindedCall = this.showDetail.bind(this) 
     for (let button of templateButtons) {
       button.addEventListener('click', function(){

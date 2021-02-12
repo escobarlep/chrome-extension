@@ -8,8 +8,8 @@ export default {
     this._mainApp = mainApp
     this._collectDataFromWeb = callbacks.collectCustomer
     this._collectDataFromWebTracking = callbacks.getTrackingData
-    
     this._repo.setStorage(this._mainApp.storage)
+
     this.updateView()
   },
   collectFromView: function(id){
@@ -19,6 +19,7 @@ export default {
     return data.value
   },
   collectAndSaveData: function(data){
+    data.collectedAt = new Date()
     this._repo.save(data)
     this.updateView()
   },

@@ -1,12 +1,12 @@
 'use strict'
-
 const Customer = {
   name: '',
   cpf: '',
   email: '',
   order: '',
   tracking: '',
-  trackingStatus: ''
+  trackingStatus: '',
+  collectedAt: ''
 }
 
 export default {
@@ -37,35 +37,5 @@ export default {
   },
   clearCustomer: function() {
     return this.save(Customer)
-  },
-  setName: function(name) {
-    let customer = this.getCustomer()
-    customer.name = name.trim()
-
-    this.save(customer)
-  },
-  setCpf: function(cpf) {
-    let customer = this.getCustomer()
-    customer.cpf = cpf.trim()
-
-    this.save(customer)
-  },
-  setEmail: function(email) {
-    let customer = this.getCustomer()
-    customer.email = email.trim()
-
-    this.save(customer)
-  },
-  setOrder: function(order) {
-    let customer = this.getCustomer()
-    customer.order = order.trim()
-
-    this.save(customer)
-  },
-  setTracking: function(tracking) {
-    let customer = this.getCustomer()
-    customer.tracking = tracking.trim()
-
-    this.save(customer)
   }
 }

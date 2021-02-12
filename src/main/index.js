@@ -4,6 +4,7 @@ import TemplateController from '/src/controllers/TemplateController.js'
 import UserController from '/src/controllers/UserController.js'
 import CustomerController from '/src/controllers/CustomerController.js'
 import PartnerController from '/src/controllers/PartnerController.js'
+import TicketController from '/src/controllers/TicketController.js'
 
 function collectCustomer() {
   
@@ -146,16 +147,10 @@ function getTrackingData() {
 App.setStorage(window.localStorage)
 App.setDocument(window.document)
 App.setCssFramework(window.M)
-App.initialSetUp()
+App.bootstrap()
 App.renderView(MainWindowView)
-
-TemplateController.setMainApp(App)
-TemplateController.setStorage()
-TemplateController.startView()
-App.renderView(TemplateController.view)
-
 UserController.initializer(App)
 CustomerController.initializer(App, {collectCustomer, getTrackingData})
 PartnerController.initializer(App, collectPartner)
-
-TemplateController.activateButtonForDetail()
+TemplateController.initializer(App)
+TicketController.initializer(App)
