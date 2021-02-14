@@ -1,4 +1,3 @@
-'use strict'
 const Customer = {
   name: '',
   cpf: '',

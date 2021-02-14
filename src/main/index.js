@@ -144,13 +144,19 @@ function getTrackingData() {
   return { trackingStatus }
 }
 
+function open() {
+  var trackingStatus = window.localStorage.getItem('app-max-order-status')
+  if (!trackingStatus) return false
+  return { trackingStatus }
+}
+
 App.setStorage(window.localStorage)
 App.setDocument(window.document)
 App.setCssFramework(window.M)
 App.bootstrap()
 App.renderView(MainWindowView)
 UserController.initializer(App)
-CustomerController.initializer(App, {collectCustomer, getTrackingData})
+CustomerController.initializer(App, { collectCustomer, getTrackingData })
 PartnerController.initializer(App, collectPartner)
 TemplateController.initializer(App)
 TicketController.initializer(App)

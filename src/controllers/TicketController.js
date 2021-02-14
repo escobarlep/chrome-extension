@@ -41,10 +41,15 @@ export default {
   },
   _activateViewListeners: function() {
     const btnSave = this._mainApp.document.getElementById(this.viewMain.idSaveTicket)
+    const btnOpenHist = this._mainApp.document.getElementById(this.viewMain.idOpenHist)
     const bindedCallSave = this.collectAndSaveTicket.bind(this)
     
     btnSave.addEventListener('click', function() {
       bindedCallSave()
+    })
+
+    btnOpenHist.addEventListener('click', function() {
+      chrome.tabs.create({ url: '/src/public/history.html' })
     })
   }
 }
