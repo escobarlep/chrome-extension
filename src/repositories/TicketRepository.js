@@ -27,16 +27,17 @@ export default {
   add: function(data) {
     if (!data) return false
     if (!data.customer || !data.partner) return false
+    if (!data.customer.length || !data.partner.length) return false
     
     const historyDTO = {
       customerName: data.customer.name,
       customerOrder: data.customer.order,
+      customerCollectedAt: data.customer.date,
       partnerName: data.partner.name,
       partnerSite: data.partner.site,
-      templateName: data.template.name,
-      customerCollectedAt: data.customer.date,
       partnerCollectedAt: data.partner.date,
-      templateCopiedAt: data.template.date,
+      templateName: data.template ? data.template.name : '',
+      templateCopiedAt: data.template ? data.template.date : '',
       createdAt: new Date()
     }
     let history = this.getAll()
