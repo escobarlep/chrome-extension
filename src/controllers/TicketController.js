@@ -29,7 +29,7 @@ export default {
     const customer = this._customerRepo.getCustomer()
     const partner = this._partnerRepo.getPartner()
     const template = this._templateRepo.getLastUsedTempl()
-    if (!customer.length || !partner.length) return
+    //if (!customer.length || !partner.length) return
     this._repo.add({ customer, partner, template })
     const btnClearCustomer = this._mainApp.document.getElementById(this.viewCustomer.idBtnClear)
     const btnClearPartner = this._mainApp.document.getElementById(this.viewPartner.idBtnClear)

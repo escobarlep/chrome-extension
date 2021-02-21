@@ -152,6 +152,7 @@ function open() {
 
 App.setStorage(window.localStorage)
 App.setDocument(window.document)
+App.setWindow(window)
 App.setCssFramework(window.M)
 App.bootstrap()
 App.renderView(MainWindowView)

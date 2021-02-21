@@ -26,8 +26,7 @@ export default {
   },
   add: function(data) {
     if (!data) return false
-    if (!data.customer || !data.partner) return false
-    if (!data.customer.length || !data.partner.length) return false
+    //if (!data.customer || !data.partner) return false
     
     const historyDTO = {
       customerName: data.customer.name,

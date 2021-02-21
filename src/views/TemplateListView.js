@@ -1,5 +1,3 @@
-'use strict'
-
 export default {
   id: '#template-list-view',
   _data: null,
