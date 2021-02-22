@@ -1,6 +1,6 @@
 import dbSetup from '/src/migrations/initial-setup.js'
 export default {
-  _migrationVersion: '14',
+  _migrationVersion: '15',
   setStorage: function(storage) {
     this.storage = storage
   },
@@ -21,6 +21,6 @@ export default {
     if ('postRender' in this._view) this._view.postRender(this.document, this.window)
   },
   bootstrap: function() {
-    dbSetup(this.storage, 1) //this._migrationVersion
+    dbSetup(this.storage, this._migrationVersion)
   }
 }

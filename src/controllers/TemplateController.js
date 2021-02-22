@@ -60,7 +60,7 @@ export default {
   trackingStatusMessage: function(status) {
     // Needed for email identation issues. I should probably solve it :D
     return `
-Verifiquei que a última atualização apresentaa no site foi: ${status}
+<b>Verifiquei que a última atualização apresentada no site foi: ${status} </b><br><br>
 `
   },
   updateData: function() {
