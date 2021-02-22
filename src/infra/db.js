@@ -617,7 +617,7 @@ Um abraço!`
       'KEY_WORD_PARTNER_EMAIL',
       'KEY_WORD_PARTNER_NAME'
     ],
-    content: `Olá <b>KEY_WORD_CUSTOMER_FIRSTNAME<b>, tudo bem com você?<br>    
+    content: `Olá <b>KEY_WORD_CUSTOMER_FIRSTNAME</b>, tudo bem com você?<br>    
 Me chamo KEY_WORD_USER_NAME, faço parte do time de atendimento da APPMAX e irei auxiliar em seu atendimento!<br><br>
 
 Primeiramente, informo que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário. Assim, a empresa APPMAX somente intermediou a compra feita por você e o estabelecimento vendedor.<br>
@@ -758,7 +758,7 @@ O pedido em nome de KEY_WORD_CUSTOMER_FIRSTNAME encontra-se como estornado confo
 NOME: KEY_WORD_CUSTOMER_FULLNAME<br>
 CPF: KEY_WORD_CUSTOMER_CPF<br>
 E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
-Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER <br><br></b>
+Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
   
 Espero ter lhe ajudado, um abraço!<br>
 Equipe Appmax.`
