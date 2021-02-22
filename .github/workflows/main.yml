@@ -1,0 +1,15 @@
+name: pr-lint
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: lint-on-self-runner
+        uses: seferov/pr-lint-action@master
+        with:
+          title-regex: '^\[FEAT|FIX|BUG|REFACT|WIP|DEPLOY\]: '
+          on-failed-regex-comment: "Failed regex: `%regex%`! "
