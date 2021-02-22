@@ -6,10 +6,9 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
-      - name: lint-on-self-runner
-        uses: seferov/pr-lint-action@master
+      - uses: seferov/pr-lint-action@master
         with:
           title-regex: '^\[FEAT|FIX|BUG|REFACT|WIP|DEPLOY\]: '
           on-failed-regex-comment: "Failed regex: `%regex%`! "
