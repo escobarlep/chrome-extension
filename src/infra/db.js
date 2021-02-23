@@ -159,7 +159,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
   
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
+<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
   
 Um abraço,<br>
 Equipe Appmax.`
@@ -202,7 +202,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
   
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
+<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
   
 Um abraço,<br>
 Equipe Appmax.`
@@ -335,7 +335,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER<br><br></b>
   
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
+<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
   
 Um abraço,<br>
 Equipe Appmax.`
@@ -377,7 +377,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER<br><br></b>
   
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
+<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
   
 Um abraço, equipe Appmax.`
   },
@@ -873,7 +873,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
   
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email.<b><br><br>
+<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
   
 Um Abraço, equipe Appmax!`
   },
@@ -915,7 +915,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
   
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
+<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
   
 Um Abraço, equipe Appmax!`
   },
