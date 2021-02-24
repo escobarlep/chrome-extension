@@ -10,7 +10,7 @@ export default {
         <div class="row">
           <div class="col s12 center">
             <p hidden="true" id="alert-copy-success" class="green-text">Dados Copiados <i class="material-icons green-text">check</i><p>
-            <div style="font-size:12px;text-align:justify;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;" id="copy-and-paste">${this._data}</div>
+            <div style="font-size:11px;text-align:justify;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;" id="copy-and-paste">${this._data}</div>
           </div>
         </div>`
     }
@@ -26,7 +26,6 @@ export default {
     window.getSelection().addRange(range)
     dom.execCommand("copy")
     window.getSelection().removeAllRanges()
-    //div.hidden=true
     alert.hidden=false
   }
 }
