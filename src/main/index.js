@@ -144,10 +144,8 @@ function getTrackingData() {
   return { trackingStatus }
 }
 
-function open() {
-  var trackingStatus = window.localStorage.getItem('app-max-order-status')
-  if (!trackingStatus) return false
-  return { trackingStatus }
+function getCurrentURL() {
+  return window.location.href
 }
 
 App.setStorage(window.localStorage)
@@ -158,6 +156,6 @@ App.bootstrap()
 App.renderView(MainWindowView)
 UserController.initializer(App)
 CustomerController.initializer(App, { collectCustomer, getTrackingData })
-PartnerController.initializer(App, collectPartner)
+PartnerController.initializer(App, { collectPartner, getCurrentURL })
 TemplateController.initializer(App)
 TicketController.initializer(App)

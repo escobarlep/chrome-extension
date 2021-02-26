@@ -34,6 +34,8 @@ export default {
       customerCollectedAt: data.customer.date,
       partnerName: data.partner.name,
       partnerSite: data.partner.site,
+      partnerObs: data.partner.obs,
+      partnerFraud: data.partner.isFraud,
       partnerCollectedAt: data.partner.date,
       templateName: data.template ? data.template.name : '',
       templateCopiedAt: data.template ? data.template.date : '',

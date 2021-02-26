@@ -17,7 +17,7 @@ export default {
         organizer[formatedDate] = [ history ]
 
       return `
-        <tr>
+        <tr class="${history.partnerFraud ? 'red-text' : '' }">
           <td><span hidden>${history.createdAt}</span>${formatedDate} - ${hours}</td>
           <td>${history.customerOrder}</td>
           <td>${history.customerName}</td>
@@ -30,7 +30,7 @@ export default {
     return { tBody, organizer }
   },
   mountCardSummary: function(data) {
-    const totalByDate = Object.keys(data)
+    const totalByDate = Object.keys(data).reverse()
 
     return totalByDate.map(item => ` 
       <div class="col s12 m3 L2">
