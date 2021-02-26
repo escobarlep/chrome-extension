@@ -5,6 +5,8 @@ const Partner = {
   email: '',
   site: '',
   phone: '',
+  obs: '',
+  isFraud: false,
   collectedAt: ''
 }
 
