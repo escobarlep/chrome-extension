@@ -40,7 +40,7 @@ export default {
   reportFraud: function(url){
     const partner = this._repo.getPartner()
     const data = { ...partner, url}
-    if (/movidesk/gi.test(url)) {
+    if (!/movidesk/gi.test(url)) {
       this.setMessage('error', 'Necessário estar no sistema Movidesk para coletar o ticket')
       return
     }
