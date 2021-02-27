@@ -32,61 +32,52 @@ export default {
 
     return { tBody, organizer }
   },
-  mountCardSummary: function(data) {
-    const totalByDate = Object.keys(data).reverse()
+  mountCardSummary: function(organizer) {
+    const totalByDate = Object.keys(organizer).reverse()
 
-    return totalByDate.map(item => ` 
+    return totalByDate.map(date => {
+      const tma = this.tmaCalc(organizer, date)
+      return ` 
       <div class="col s12 m3 L2">
         <div class="card-panel black">
           <p class="center white-text">
-            ${item} : ${data[item].length} 
+            ${date} : ${organizer[date].length} <br>
+            TMA = ${tma} (Min/Tickets)
           </p>
         </div>
       </div>
-    `).join('')
+    `
+    }).join('')
   },
   diff_minutes: function(dt2, dt1) {
     let diff =(dt2.getTime() - dt1.getTime()) / 1000
     diff /= 60
     return Math.abs(Math.round(diff))
   },
-  mountCardTma: function(organizer){
-    let tma = 0
-    const formatedToday = (new Intl.DateTimeFormat('pt-br')).format(new Date())
-    if (organizer[formatedToday]) {
-      const totalHistoryToday = organizer[formatedToday].length
-      if (totalHistoryToday && totalHistoryToday > 0) {
-        const latsIndex = totalHistoryToday - 1
-        let minRes = organizer[formatedToday][0]
-        minRes = new Date(minRes.createdAt)
-        let maxRes = organizer[formatedToday][latsIndex]
-        maxRes = new Date(maxRes.createdAt)
-        let totalWorkMinutes = this.diff_minutes(maxRes, minRes)
-        totalWorkMinutes = totalWorkMinutes > 300 ? // If they are working for 5h, discount 1h
-          totalWorkMinutes - 60 : // 1h lunch interval
-          totalWorkMinutes
-        tma = (totalWorkMinutes / totalHistoryToday).toFixed(2).replace('.',':')
-      }
+  tmaCalc: function(organizer, date){
+    let tma = '0:00'
+    const totalHistoryToday = organizer[date].length
+    if (totalHistoryToday && totalHistoryToday > 0) {
+      const latsIndex = totalHistoryToday - 1
+      let minRes = organizer[date][0]
+      minRes = new Date(minRes.createdAt)
+      let maxRes = organizer[date][latsIndex]
+      maxRes = new Date(maxRes.createdAt)
+      let totalWorkMinutes = this.diff_minutes(maxRes, minRes)
+      totalWorkMinutes = totalWorkMinutes > 300 ? // If they are working for 5h, discount 1h
+        totalWorkMinutes - 60 : // 1h lunch interval
+        totalWorkMinutes
+      tma = (totalWorkMinutes / totalHistoryToday).toFixed(2).replace('.',':')
     }
 
-    return `
-      <div class="col s12 m3 L2">
-        <div class="card-panel black">
-          <p class="center white-text">
-            TMA = ${tma} (Min/Tickets)
-          </p>
-        </div>
-      </div>
-    `
+    return tma
   },
   template: function() {
     if (this._data) {
       const summary = this.summarize()
       const sumUp = this.mountCardSummary(summary.organizer)
-      const tma = this.mountCardTma(summary.organizer)
       return `
         <div class="row">
-          ${tma}
           ${sumUp}
         </div>
         <table class="responsive-table striped highlight">
