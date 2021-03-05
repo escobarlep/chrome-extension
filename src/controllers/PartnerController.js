@@ -1,8 +1,10 @@
 import PartnerFormView from '/src/views/PartnerFormView.js'
 import PartnerFraudView from '/src/views/PartnerFraudView.js'
 import PartnerRepository from '/src/repositories/PartnerRepository.js'
+import CustomerRepository from '/src/repositories/CustomerRepository.js'
 
 export default {
+  _customerRepo: CustomerRepository,
   _repo: PartnerRepository,
   view: PartnerFormView,
   viewFraud: PartnerFraudView,
@@ -10,8 +12,12 @@ export default {
     this._mainApp = mainApp
     this._collectPartner = callback.collectPartner
     this._collectCurrentUrl = callback.getCurrentURL
-    this._repo.setStorage(this._mainApp.storage)
+    this.setStorage()
     this.updateView()
+  },
+  setStorage: function(){
+    this._repo.setStorage(this._mainApp.storage)
+    this._customerRepo.setStorage(this._mainApp.storage)
   },
   collectFromView: function(id){
     const data = this._mainApp.document.getElementById(id)
@@ -39,7 +45,8 @@ export default {
   },
   reportFraud: function(url){
     const partner = this._repo.getPartner()
-    const data = { ...partner, url}
+    const { orderUrl } = this._customerRepo.getCustomer()
+    const data = { ...partner, url, orderUrl}
     if (!/movidesk/gi.test(url)) {
       this.setMessage('error', 'Necessário estar no sistema Movidesk para coletar o ticket')
       return
