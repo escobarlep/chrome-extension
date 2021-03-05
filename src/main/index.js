@@ -1,10 +1,11 @@
 import App from './App.js'
-import MainWindowView from '/src/views/MainWindowView.js'
+import MainWindowController from '/src/controllers/MainWindowController.js'
 import TemplateController from '/src/controllers/TemplateController.js'
 import UserController from '/src/controllers/UserController.js'
 import CustomerController from '/src/controllers/CustomerController.js'
 import PartnerController from '/src/controllers/PartnerController.js'
 import TicketController from '/src/controllers/TicketController.js'
+
 
 function collectCustomer() {
   
@@ -154,7 +155,7 @@ App.setDocument(window.document)
 App.setWindow(window)
 App.setCssFramework(window.M)
 App.bootstrap()
-App.renderView(MainWindowView)
+MainWindowController.initializer(App)
 UserController.initializer(App)
 CustomerController.initializer(App, { collectCustomer, getTrackingData })
 PartnerController.initializer(App, { collectPartner, getCurrentURL })

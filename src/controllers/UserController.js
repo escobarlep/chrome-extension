@@ -42,29 +42,29 @@ export default {
     this._repo.clearName()
     this.updateView()
   },
-
   _activateViewListeners: function() {
     const M = this._mainApp.fwCssManager
     const doc = this._mainApp.document
     const elems = doc.querySelectorAll('.dropdown-trigger')
-    M.Dropdown.init(elems)
-
+    
     const buttonRegister = doc.getElementById(this.view.idBtnUserRegister)
     const buttonChange = doc.getElementById(this.viewMain.idLogOut)
     const bindCallRemoveName = this.clearView.bind(this)
     const bindCallUpdateDataFromView = this.collectAndUpdateFromView.bind(this)
     const bindCallUpdateView = this.updateView.bind(this)
 
-    if (buttonRegister) {
-      buttonRegister.addEventListener('click', function() {
-        bindCallUpdateDataFromView()
-        bindCallUpdateView()
-      })
-    } else if (buttonChange) {
+    M.Dropdown.init(elems)
+
+    if (buttonChange) {
       buttonChange.addEventListener('click', function() {
         bindCallRemoveName()
         bindCallUpdateView()
       })
-    }
+    } else if (buttonRegister) {
+      buttonRegister.addEventListener('click', function() {
+        bindCallUpdateDataFromView()
+        bindCallUpdateView()
+      })
+    } 
   }
 }
