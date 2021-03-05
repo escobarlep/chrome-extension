@@ -31,6 +31,7 @@ export default {
     const historyDTO = {
       customerName: data.customer.name,
       customerOrder: data.customer.order,
+      customerOrderUrl: data.customer.orderUrl,
       customerCollectedAt: data.customer.date,
       partnerName: data.partner.name,
       partnerSite: data.partner.site,
