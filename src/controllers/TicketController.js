@@ -47,7 +47,7 @@ export default {
   },
   _activateViewListeners: function() {
     const btnSave = this._mainApp.document.getElementById(this.viewMain.idSaveTicket)
-    const btnOpenHist = this._mainApp.document.getElementById(this.viewMain.idOpenHist)
+    const btnOpenHist = this._mainApp.document.getElementById(this.viewMain.idCounter)
     const bindedCallSave = this.collectAndSaveTicket.bind(this)
     
     btnSave.addEventListener('click', function() {

@@ -12,8 +12,7 @@ export default {
   title: function() {
     return `
     <i id="save-ticket" class="material-icons left" style="cursor:pointer;margin-left: 15px">get_app</i>
-    <i id="open-history" class="material-icons left" style="cursor:pointer;margin-left: 15px">remove_red_eye</i>
-    <span style="margin-left: 15px" id="nav-total-tickets-count" class="white chip blue-appmax-text">${this._data}</span>
+    <span style="cursor:pointer;margin-left: 15px" id="nav-total-tickets-count" class="white chip blue-appmax-text">${this._data}</span>
     <h6 class="brand-logo">Maxter CX</h6>`
   },
   template: function() {
