@@ -20,5 +20,14 @@ export default {
     const formatedToday = (new Intl.DateTimeFormat('pt-br')).format(new Date())
     if (summary[formatedToday]) this.view.setData(summary[formatedToday].length)
     this._mainApp.renderView(this.view)
+  },
+  updateCounter: function(){
+    const summary = this.histController.summarize()
+    const formatedToday = (new Intl.DateTimeFormat('pt-br')).format(new Date())
+    if (summary[formatedToday]) {
+      const doc = this._mainApp.document
+      const chipCounter = doc.getElementById(this.view.idCounter)
+      chipCounter.innerHTML = summary[formatedToday].length
+    }
   }
 }
