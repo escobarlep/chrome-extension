@@ -28,11 +28,13 @@ export default {
     this.updateView()
   },
   updateCustomerFromView: function(){
+    const { orderUrl } = this._repo.getCustomer()
     const customer = {
       name: this.collectFromView(this.view.idName),
       cpf: this.collectFromView(this.view.idCpf),
       email: this.collectFromView(this.view.idEmail),
       order: this.collectFromView(this.view.idOrder),
+      orderUrl: orderUrl,
       tracking: this.collectFromView(this.view.idTracking),
       trackingStatus: this.collectFromView(this.view.idTrackingStatus)
     }

@@ -102,7 +102,7 @@ Entendi sua solicitação e gostaria de esclarecer que a APPMAX é uma plataform
 
 Porém a empresa <b>KEY_WORD_PARTNER_NAME</b> disponibilizou essa informação em nosso sistema.<br><br>
 
-Para consultar o status de entrega do seu pedido é necessário colocar o código de rastreio <b>KEY_WORD_CUSTOMER_TRACKING </b> no site a seguir https://track.ebanx.com/pt.<br><br>
+Para consultar o status de entrega do seu pedido é necessário colocar o código de rastreio <b>KEY_WORD_CUSTOMER_TRACKING </b> no site a seguir https://track.ebanx.com/pt <br><br>
 
 <b>KEY_WORD_CUSTOMER_STATUSTRACKING</b>
 
@@ -576,7 +576,7 @@ Um abraço, equipe Appmax!`
   },
   {
     name: 'parceiro-nao-respondeu-feminino',
-    keyWords: ['nao', 'respondeu', 'feminino'],
+    keyWords: ['parceiro', 'nao', 'respondeu', 'feminino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
       'KEY_WORD_USER_NAME',

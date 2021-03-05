@@ -8,10 +8,12 @@ export default {
   template: function() {
     const partner = this._data
     const { url } = this._data
+    const { orderUrl } = this._data
     return `
       <div style="font-size:12px;text-align:justify;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;" id="copy-and-paste-fraud">
         <p hidden="true" id="alert-copy-success-fraud" class="green-text">Dados Copiados <i class="material-icons green-text">check</i><p>
         ${url} <br>
+        ${orderUrl} <br>
         <b>Parceiro: ${partner.name} / ${partner.cnpj} <br>
         Site: ${partner.site} <br>
         Motivo: ${partner.obs} </b> <br>

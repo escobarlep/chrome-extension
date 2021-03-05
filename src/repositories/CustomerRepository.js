@@ -3,6 +3,7 @@ const Customer = {
   cpf: '',
   email: '',
   order: '',
+  orderUrl: '',
   tracking: '',
   trackingStatus: '',
   collectedAt: ''

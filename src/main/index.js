@@ -36,6 +36,7 @@ function collectCustomer() {
     order = order.slice(1)
   }
   customer.order = order ? order.trim() : ''
+  customer.orderUrl = window.location.href
   
   var moreInfo = document.getElementsByTagName('address')
   moreInfo = moreInfo[1].innerText
