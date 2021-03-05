@@ -1,6 +1,6 @@
 import dbSetup from '/src/migrations/initial-setup.js'
 export default {
-  _migrationVersion: '19',
+  _migrationVersion: '21',
   setStorage: function(storage) {
     this.storage = storage
   },
