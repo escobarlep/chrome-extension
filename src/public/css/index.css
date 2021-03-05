@@ -11,10 +11,15 @@ body {
   background-color: #00acd6;
 }
 
+.blue-appmax-text {
+  color: #00acd6;
+}
+
 .nav-wrapper {
   background-color: #222d32 !important;
   color: white !important;
 }
+nav-span-counter
 
 input {
   height: 2rem !important;

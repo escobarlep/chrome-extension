@@ -33,7 +33,7 @@ export default {
       nav.innerHTML += this.view.template()
     } else {
       registerView.hidden = false
-      nav.innerHTML = this.viewMain.title
+      nav.innerHTML = this.viewMain.title()
       this._mainApp.renderView(this.view)
     }
     this._activateViewListeners()
