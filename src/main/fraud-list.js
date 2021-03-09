@@ -1,3 +1,3 @@
-import FraudListController from '/src/controllers/FraudListController.js'
+import PartnerIrregularityListController from '/src/controllers/PartnerIrregularityListController.js'
 
-FraudListController.initializer(window)
+PartnerIrregularityListController.initializer(window)

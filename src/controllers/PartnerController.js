@@ -2,21 +2,25 @@ import PartnerFormView from '/src/views/PartnerFormView.js'
 import PartnerFraudView from '/src/views/PartnerFraudView.js'
 import PartnerRepository from '/src/repositories/PartnerRepository.js'
 import CustomerRepository from '/src/repositories/CustomerRepository.js'
+import PartnerIrregularityListController from '/src/controllers/PartnerIrregularityListController.js'
 
 export default {
   _customerRepo: CustomerRepository,
   _repo: PartnerRepository,
+  _irregularityController: PartnerIrregularityListController,
   view: PartnerFormView,
   viewFraud: PartnerFraudView,
   initializer: function(mainApp, callback){
     this._mainApp = mainApp
     this._collectPartner = callback.collectPartner
     this._collectCurrentUrl = callback.getCurrentURL
+    this._irregularityController.setDocument(this._mainApp.document)
     this.setStorage()
     this.updateView()
   },
   setStorage: function(){
     this._repo.setStorage(this._mainApp.storage)
+    this._irregularityController.setStorage(this._mainApp.storage)
     this._customerRepo.setStorage(this._mainApp.storage)
   },
   collectFromView: function(id){
@@ -25,9 +29,11 @@ export default {
 
     return data.value
   },
-  collectAndSaveData: function(data){
-    data.collectedAt = new Date()
-    this._repo.save(data)
+  collectAndSaveData: function(partner){
+    partner.collectedAt = new Date()
+    partner.isFraud = this._irregularityController.isPartnerListedAsFraud(partner)
+    partner.hasNoFunds = this._irregularityController.isPartnerListedAsNoFunds(partner)
+    this._repo.save(partner)
     this.updateView()
   },
   updatePartnerFromView: function(){
@@ -39,7 +45,11 @@ export default {
       site: this.collectFromView(this.view.idSite),
       obs: this.collectFromView(this.view.idObs),
     }
+    partner.isFraud = this._irregularityController.isPartnerListedAsFraud(partner)
+    partner.hasNoFunds = this._irregularityController.isPartnerListedAsNoFunds(partner)
+
     this._repo.save(partner)
+    this.updateView()
 
     return partner
   },
@@ -66,9 +76,13 @@ export default {
     this.updateView()
   },
   updateView: function(){
-    this.view.setData(this._repo.getPartner())
+    const partner = this._repo.getPartner()
+    this.view.setData(partner)
     this._mainApp.renderView(this.view)
     this._activateViewListeners()
+    if (partner.isFraud) this.setMessage('error', 'Parceiro está listado como <b>Fraude</b>')
+    if (partner.hasNoFunds) this.setMessage('error', 'Parceiro está listado como <b>Negativado</b>')
+    if (partner.hasNoFunds && partner.isFraud) this.setMessage('error', 'Parceiro está listado como <b>Fraude</b> e <b>Negativado</b>')
   },
   _activateViewListeners: function(){
     const btnUpdate = this._mainApp.document.getElementById(this.view.idBtnUpdatePartner)
