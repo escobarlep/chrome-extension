@@ -21,6 +21,7 @@ export default {
   summarize: function() {
     const organizer = []
     const data = this._repo.getAll()
+    if (!data) return []
     data.forEach(history => {
       const newDate = new Date(history.createdAt)
       const hours = newDate.toTimeString().split(' ')[0]
