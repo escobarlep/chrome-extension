@@ -75,6 +75,7 @@ export default {
     const btnClear = this._mainApp.document.getElementById(this.view.idBtnClear)
     const btnCollect = this._mainApp.document.getElementById(this.view.idBtnCollect)
     const btnReportFraud = this._mainApp.document.getElementById(this.view.idBtnReportFraud)
+    const btnImportFraudList = this._mainApp.document.getElementById(this.view.idOpenFraudList)
     const bindedCallUpdate = this.updatePartnerFromView.bind(this)
     const bindedCallClear = this.clearView.bind(this)
     const bindedCollect = this.collectAndSaveData.bind(this)
@@ -101,6 +102,10 @@ export default {
         { code: '(' + bindedCallbackCollectUrl + ')()' }, 
         data => bindedCallReportFraud(data)
       )
+    })
+
+    btnImportFraudList.addEventListener('click', function() {
+      chrome.tabs.create({ url: '/src/public/fraud-list.html' })
     })
   }
 }
