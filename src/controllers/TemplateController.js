@@ -38,7 +38,7 @@ export default {
     const templateContent = this.replaceTemplateKeyWords(template)
     this.viewDetail.setData(templateContent)
     this._mainApp.renderView(this.viewDetail)
-    this._repo.addHistory(template.name)
+    this._repo.addHistory(template)
   },
   replaceTemplateKeyWords: function(data) {
     this.updateData()

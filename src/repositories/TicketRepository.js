@@ -1,11 +1,15 @@
 const History = {
   customerName: '',
   customerOrder: '',
+  customerOrderUrl: '',
+  customerCollectedAt: '',
   partnerName: '',
   partnerSite: '',
-  templateName: '',
-  customerCollectedAt: '',
+  partnerObs: '',
+  partnerFraud: '',
   partnerCollectedAt: '',
+  templateId: '',
+  templateName: '',
   templateCopiedAt: '',
   createdAt: ''
 }
@@ -27,7 +31,7 @@ export default {
   add: function(data) {
     if (!data) return false
     //if (!data.customer || !data.partner) return false
-    
+
     const historyDTO = {
       customerName: data.customer.name,
       customerOrder: data.customer.order,
@@ -38,6 +42,7 @@ export default {
       partnerObs: data.partner.obs,
       partnerFraud: data.partner.isFraud,
       partnerCollectedAt: data.partner.date,
+      templateName: data.template ? data.template.id : '',
       templateName: data.template ? data.template.name : '',
       templateCopiedAt: data.template ? data.template.date : '',
       createdAt: new Date()

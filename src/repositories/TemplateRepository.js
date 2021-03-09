@@ -14,13 +14,13 @@ export default {
   clearHistory: function() {
     this._storage.removeItem(this.getHistoryPrefix())
   },
-  addHistory: function(templateName) {
-    console.log(templateName)
-    const template = {
+  addHistory: function(template) {
+    const data = {
       date: new Date(),
-      name: templateName
+      name: template.name,
+      id: template.id
     }
-    return this._storage.setItem(this.getHistoryPrefix(), JSON.stringify(template))
+    return this._storage.setItem(this.getHistoryPrefix(), JSON.stringify(data))
   },
   getPrefix: function() {
     return this._prefix
