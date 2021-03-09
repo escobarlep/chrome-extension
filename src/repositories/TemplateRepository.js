@@ -1,5 +1,5 @@
 export default {
-  _prefix: 'app-max-templ-',
+  _prefix: 'app-max-templates',
   _prefixHistory: 'app-max-last-templ',
 
   setStorage: function(storage) {
@@ -14,10 +14,11 @@ export default {
   clearHistory: function() {
     this._storage.removeItem(this.getHistoryPrefix())
   },
-  addHistory: function(templ) {
+  addHistory: function(templateName) {
+    console.log(templateName)
     const template = {
       date: new Date(),
-      name: templ
+      name: templateName
     }
     return this._storage.setItem(this.getHistoryPrefix(), JSON.stringify(template))
   },
@@ -33,9 +34,15 @@ export default {
     const data = this._storage.getItem(fullName)
     return JSON.parse(data)
   },
+  getById: function(id) {
+    let data = this.listAllTemplates()
+    const template = data.find(templ => templ.id === Number(id))
+
+    if (!template) return {}
+    return template
+  },
   listAllTemplates: function() {
-    const keys = Object.keys(this._storage)
-    const regexp = new RegExp(this._prefix)
-    return keys.filter(storageKey => regexp.test(storageKey))
+    const data = this._storage.getItem(this.getPrefix())
+    return JSON.parse(data)
   }
 }

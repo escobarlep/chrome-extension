@@ -13,10 +13,9 @@ export default {
           </div>
           <ul class="collection">
             ${ 
-              this._data.map(item => {
-                return '<li style="cursor:pointer" class="collection-item find-template">' +
-                  item + '</li>'
-              }).join('')
+              this._data
+                .map(item => `<li data-id="${item.id}" style="cursor:pointer" class="collection-item find-template">${item.name}</li>`)
+                .join('')
             }
           </ul>
         </div>`

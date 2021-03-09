@@ -30,24 +30,15 @@ export default {
     this._partnerRepo.setStorage(this._mainApp.storage)
   },
   listAllTemplates: function() {
-    const allTempls = this._repo.listAllTemplates()
-    return allTempls.map(template => {
-      try {
-        return template
-          .replace(this._repo.getPrefix(), '')
-          .replaceAll('-', ' ')  
-      } catch (error) {
-        return 'template-error'
-      }
-    })
+    return this._repo.listAllTemplates()
   },
-  showDetail: function(text) {
+  showDetail: function(id) {
     this.setStorage(this._mainApp.storage)
-    const data = this._repo.getByName(text)
-    const template = this.replaceTemplateKeyWords(data)
-    this.viewDetail.setData(template)
+    const template = this._repo.getById(id)
+    const templateContent = this.replaceTemplateKeyWords(template)
+    this.viewDetail.setData(templateContent)
     this._mainApp.renderView(this.viewDetail)
-    this._repo.addHistory(text)
+    this._repo.addHistory(template.name)
   },
   replaceTemplateKeyWords: function(data) {
     this.updateData()
@@ -94,7 +85,7 @@ export default {
     const bindedCall = this.showDetail.bind(this) 
     for (let button of templateButtons) {
       button.addEventListener('click', function(){
-        bindedCall(button.innerText)
+        bindedCall(button.getAttribute('data-id'))
       })
     }
   },

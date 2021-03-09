@@ -1,6 +1,7 @@
 export default [
   {
-    name: 'sem-rastreio-feminino',
+    id: 1,
+    name: 'Sem rastreio feminino',
     keyWords: ['sem rastreio', 'feminino'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -42,7 +43,8 @@ Lembrando que sua empresa é responsável por todas as informações sobre a com
 Um Abraço, equipe Appmax!`,
   },
   {
-    name: 'sem-rastreio-masculino',
+    id: 2,
+    name: 'Sem rastreio masculino',
     keyWords: ['sem rastreio', 'masculino'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -84,7 +86,8 @@ Lembrando que sua empresa é responsável por todas as informações sobre a com
 Um abraço, equipe Appmax!`,
   },
   {
-    name: 'com-rastreio-unissex',
+    id: 3,
+    name: 'Com rastreio unissex',
     keyWords: ['com rastreio', 'unissex'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -117,7 +120,8 @@ Espero ter lhe ajudado, um abraço!<br>
 Equipe Appmax.`,
   },
   {
-    name: 'rastreio-incorreto-masculino',
+    id: 4,
+    name: 'Rastreio incorreto masculino',
     keyWords: ['rastreio', 'incorreto', 'masculino'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -161,7 +165,8 @@ Um abraço,<br>
 Equipe Appmax.`,
   },
   {
-    name: 'rastreio-incorreto-feminino',
+    id: 5,
+    name: 'Rastreio incorreto feminino',
     keyWords: ['rastreio', 'incorreto', 'feminino'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -203,7 +208,8 @@ Um abraço,<br>
 Equipe Appmax.`,
   },
   {
-    name: 'parceiro-negativado',
+    id: 6,
+    name: 'Parceiro negativado',
     keyWords: ['negativado'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -235,7 +241,8 @@ Logo você receberá um e-mail automático solicitando a sua avaliação em rela
 Equipe APPMAX.`,
   },
   {
-    name: 'estorno-parceiro-fraude-cartao',
+    id: 7,
+    name: 'Estorno parceiro fraude cartao',
     keyWords: ['fraude', 'estorno', 'cartao'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -260,7 +267,8 @@ Qualquer dúvida, estamos sempre à disposição.<br>
 Abraço, equipe Appmax!`,
   },
   {
-    name: 'estorno-parceiro-fraude-boleto',
+    id: 8,
+    name: 'estorno parceiro fraude boleto',
     keyWords: ['fraude', 'estorno', 'boleto'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -295,7 +303,8 @@ Qualquer dúvida, estamos sempre à disposição.<br>
 Abraço, equipe Appmax!`,
   },
   {
-    name: 'solicitação-cancelamento-masculino',
+    id: 9,
+    name: 'Solicitação cancelamento masculino',
     keyWords: ['cancelamento', 'masculino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -336,7 +345,8 @@ Um abraço,<br>
 Equipe Appmax.`,
   },
   {
-    name: 'solicitação-cancelamento-feminino',
+    id: 10,
+    name: 'Solicitação cancelamento feminino',
     keyWords: ['cancelamento', 'feminino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -376,7 +386,8 @@ Lembrando que sua empresa é responsável por todas as informações sobre a com
 Um abraço, equipe Appmax.`,
   },
   {
-    name: 'duvida-ebook-pagamento-pendente',
+    id: 11,
+    name: 'Duvida ebook pagamento pendente',
     keyWords: ['ebook', 'pagamento'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -406,7 +417,8 @@ Espero ter lhe ajudado<br>
 Abraço Equipe Appmax!`,
   },
   {
-    name: 'duvida-ebook-pagamento-confirmado',
+    id: 12,
+    name: 'Duvida ebook pagamento confirmado',
     keyWords: ['ebook', 'envio'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -436,7 +448,8 @@ Espero ter lhe ajudado <br>
 Abraço Equipe Appmax!`,
   },
   {
-    name: 'solicitacao-estorno-boleto',
+    id: 13,
+    name: 'Solicitacao estorno boleto',
     keyWords: ['estorno', 'boleto'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -458,7 +471,8 @@ Espero que sua solicitação tenha sido atendida, caso contrário, permaneço 
 Abraço, equipe Appmax!`,
   },
   {
-    name: 'solicitacao-dados-estorno-boleto',
+    id: 14,
+    name: 'Solicitacao dados estorno boleto',
     keyWords: ['estorno', 'boleto'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -489,7 +503,8 @@ Qualquer dúvida, estamos sempre à disposição!<br>
 Abraço Equipe Appmax.`,
   },
   {
-    name: 'confirmacao-recebimento',
+    id: 15,
+    name: 'Confirmacao recebimento',
     keyWords: ['confirmacao', 'recebimento'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -509,7 +524,8 @@ Ficamos a sua disposição.<br>
 Atendimento Appmax <3`,
   },
   {
-    name: 'comprovante-estorno-cartao',
+    id: 16,
+    name: 'Comprovante estorno cartao',
     keyWords: ['comprovante', 'estorno'],
     requiredFields: ['KEY_WORD_CUSTOMER_FIRSTNAME', 'KEY_WORD_USER_NAME'],
     content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
@@ -525,7 +541,8 @@ Um abraço! <3<br>
 Atendimento Appmax`,
   },
   {
-    name: 'comprovante-estorno-boleto',
+    id: 17,
+    name: 'Comprovante estorno boleto',
     keyWords: ['comprovante', 'estorno', 'boleto'],
     requiredFields: ['KEY_WORD_CUSTOMER_FIRSTNAME', 'KEY_WORD_USER_NAME'],
     content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
@@ -540,7 +557,8 @@ Um abraço! <3 <br>
 Atendimento Appmax`,
   },
   {
-    name: 'parceiro-nao-respondeu-masculino',
+    id: 18,
+    name: 'Parceiro nao respondeu masculino',
     keyWords: ['nao', 'respondeu'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -569,7 +587,8 @@ Espero que em breve você tenha uma nova experiência boa conosco, e qualquer d�
 Um abraço, equipe Appmax!`,
   },
   {
-    name: 'parceiro-nao-respondeu-feminino',
+    id: 19,
+    name: 'Parceiro nao respondeu feminino',
     keyWords: ['parceiro', 'nao', 'respondeu', 'feminino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -597,7 +616,8 @@ Espero que em breve você tenha uma nova experiência boa conosco, e qualquer d�
 Um abraço!`,
   },
   {
-    name: 'boleto-pendente',
+    id: 19,
+    name: 'Boleto pendente',
     keyWords: ['boleto', 'pendente'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -625,7 +645,8 @@ Logo você receberá um e-mail automático solicitando a sua avaliação em rela
 Um abraço, atendimento Appmax`,
   },
   {
-    name: 'devolucao-parceiro-masculino',
+    id: 20,
+    name: 'Devolucao parceiro masculino',
     keyWords: ['devolucao', 'parceiro', 'masculino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -655,7 +676,8 @@ Espero ter ajudado e fico à disposição para o que for necessário!<br><br>
 Um abraço, atendimento Appmax`,
   },
   {
-    name: 'devolucao-parceiro-feminino',
+    id: 21,
+    name: 'Devolucao parceiro feminino',
     keyWords: ['devolucao', 'parceiro', 'feminino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -687,7 +709,8 @@ Espero ter ajudado e fico à disposição para o que for necessário!<br><br>
 Um abraço, atendimento Appmax`,
   },
   {
-    name: 'boleto-pago',
+    id: 22,
+    name: 'Boleto pago',
     keyWords: ['boleto', 'pago'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -715,7 +738,8 @@ Espero ter lhe ajudado, um abraço!<br>
 Equipe Appmax.`,
   },
   {
-    name: 'estorno-nao-solicitado-cliente',
+    id: 23,
+    name: 'Estorno nao solicitado cliente',
     keyWords: ['estorno', 'duvida'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -753,7 +777,8 @@ Espero ter lhe ajudado, um abraço!<br>
 Equipe Appmax.`,
   },
   {
-    name: 'parceiro-respondeu',
+    id: 24,
+    name: 'Parceiro respondeu',
     keyWords: ['parceiro', 'respondeu'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -780,7 +805,8 @@ Logo você receberá um e-mail automático solicitando a sua avaliação em rela
 Atendimento Appmax`,
   },
   {
-    name: 'formulario-devolucao-feminino',
+    id: 25,
+    name: 'Formulario devolucao feminino',
     keyWords: ['formulario', 'devolucao', 'feminino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -803,7 +829,8 @@ Abraço!<br>
 KEY_WORD_USER_NAME - Suporte ao cliente Appmax`,
   },
   {
-    name: 'formulario-devolucao-masculino',
+    id: 26,
+    name: 'Formulario devolucao masculino',
     keyWords: ['formulario', 'devolucao', 'masculino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -826,7 +853,8 @@ Abraço!<br>
 KEY_WORD_USER_NAME - Suporte ao cliente Appmax`,
   },
   {
-    name: 'alteracao-pedido-feminino',
+    id: 27,
+    name: 'Alteracao pedido feminino',
     keyWords: ['alteracao', 'pedido', 'feminino'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -868,7 +896,8 @@ Lembrando que sua empresa é responsável por todas as informações sobre a com
 Um Abraço, equipe Appmax!`,
   },
   {
-    name: 'alteracao-pedido-masculino',
+    id: 28,
+    name: 'Alteracao pedido masculino',
     keyWords: ['alteracao', 'pedido', 'masculino'],
     requiredFields: [
       'KEY_WORD_USER_NAME',
@@ -910,7 +939,8 @@ Lembrando que sua empresa é responsável por todas as informações sobre a com
 Um Abraço, equipe Appmax!`,
   },
   {
-    name: 'solicitacao-estorno-cartao',
+    id: 29,
+    name: 'Solicitacao estorno cartao',
     keyWords: ['solicitacao', 'estorno', 'cartao'],
     requiredFields: ['KEY_WORD_CUSTOMER_FIRSTNAME', 'KEY_WORD_USER_NAME'],
     content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br> 
@@ -924,7 +954,8 @@ O prazo para a <b>avaliação é de 48 horas</b>, e após a aprovação o seto
 Espero que sua solicitação tenha sido atendida, caso contrário, permaneço a sua disposição. `,
   },
   {
-    name: 'aguardar-prazo',
+    id: 30,
+    name: 'Aguardar prazo',
     keyWords: ['aguardar', 'prazo'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -943,7 +974,8 @@ Conto com a sua compreensão! <br><br>
 Um abraço equipe Appmax! `,
   },
   {
-    name: 'email-sem-assunto',
+    id: 31,
+    name: 'Email sem assunto',
     keyWords: ['sem', 'assunto'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -967,7 +999,8 @@ Espero ter lhe ajudado! <br>
 Um abraço, equipe Appmax`,
   },
   {
-    name: 'cbk-tratativa',
+    id: 32,
+    name: 'cbk tratativa',
     keyWords: ['cbk', 'tratativa'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -1009,7 +1042,8 @@ Um abraço!<br>
 Equipe Appmax.`,
   },
   {
-    name: 'cbk-finalizado',
+    id: 33,
+    name: 'cbk finalizado',
     keyWords: ['cbk', 'finalizado'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -1032,7 +1066,8 @@ Espero ter tirado todas as suas dúvidas e fico à disposição para o que for n
 Um abraço, atendimento Appmax`,
   },
   {
-    name: 'appmax-24h',
+    id: 34,
+    name: 'Appmax 24h',
     keyWords: ['prazo', '24h'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -1058,7 +1093,8 @@ Espero que possamos resolver a situação, e qualquer dúvida, permaneço a sua 
 Um abraço, atendimento Appmax`,
   },
   {
-    name: 'agradecimento-avaliacao',
+    id: 35,
+    name: 'Agradecimento avaliacao',
     keyWords: ['agradecimento', 'avaliacao'],
     requiredFields: ['KEY_WORD_CUSTOMER_FIRSTNAME', 'KEY_WORD_USER_NAME'],
     content: `Olá <b>KEY_WORD_CUSTOMER_FIRSTNAME</b>!<br><br>
@@ -1073,7 +1109,8 @@ Desde já, meu muito obrigada! Conte comigo para o que precisar.<br><br>
 Atendimento Appmax`,
   },
   {
-    name: 'cliente-quis-aguardar',
+    id: 36,
+    name: 'Cliente quis aguardar',
     keyWords: ['cliente', 'aguardar'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
@@ -1098,8 +1135,9 @@ Permaneço a disposição ❤<br>
 Abraço, suporte Appmax! `,
   },
   {
-    name: 'cliente-quis-aguardar',
-    keyWords: ['cliente', 'aguardar'],
+    id: 37,
+    name: '2º contato appmax',
+    keyWords: ['contato', 'appmax', 'segundo', '2', '2º'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
       'KEY_WORD_USER_NAME',
@@ -1130,7 +1168,8 @@ Farei tudo que estiver ao meu alcance, para que você tenha o retorno desejado! 
 Um abraço, atendimento Appmax ❤ `,
   },
   {
-    name: 'ticket-cancelado',
+    id: 38,
+    name: 'Ticket cancelado',
     keyWords: ['cancelado'],
     requiredFields: ['KEY_WORD_CUSTOMER_EMAIL'],
     content: `CANCELADO`,
