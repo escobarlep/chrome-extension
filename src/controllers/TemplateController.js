@@ -31,7 +31,6 @@ export default {
   },
   listAllTemplates: function() {
     const allTempls = this._repo.listAllTemplates()
-
     return allTempls.map(template => {
       return template
         .replace(this._repo.getPrefix(), '')

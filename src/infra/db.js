@@ -1130,7 +1130,7 @@ Farei tudo que estiver ao meu alcance, para que você tenha o retorno desejado! 
 Um abraço, atendimento Appmax ❤ `,
   },
   {
-    name: 'cancelado',
+    name: 'ticket-cancelado',
     keyWords: ['cancelado'],
     requiredFields: ['KEY_WORD_CUSTOMER_EMAIL'],
     content: `CANCELADO`,
