@@ -31,7 +31,7 @@ export default {
         <div class="row" style="padding: 15px">
           <div hidden=true id="partner-msg" class="col s12"></div>
           <div class="col s12">
-            <input placeholder="Razão Social" id="partner-name" type="text" value="${partner.name}">
+            <input class="${partner.isFraud || partner.hasNoFunds ? 'red-text': ''}" placeholder="Razão Social" id="partner-name" type="text" value="${partner.name}">
           </div>
           <div class="col s12">
             <input placeholder="CNPJ" id="partner-cnpj" type="text" value="${partner.cnpj}">

@@ -7,6 +7,7 @@ const Partner = {
   phone: '',
   obs: '',
   isFraud: false,
+  hasNoFunds: false,
   collectedAt: ''
 }
 
