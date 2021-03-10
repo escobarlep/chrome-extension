@@ -1,0 +1,3 @@
+import PartnerIrregularityListController from '/src/controllers/PartnerIrregularityListController.js'
+
+PartnerIrregularityListController.initializer(window)
