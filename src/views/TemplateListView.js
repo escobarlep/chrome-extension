@@ -27,12 +27,13 @@ export default {
     var inputSearch = dom.querySelector('#search-templ')
 
     inputSearch.addEventListener('input', function(){
-      const word = new RegExp(inputSearch.value, 'gi')
+      var word = new RegExp(this.value.trim().toLowerCase(), 'gi')
       const templates = dom.querySelectorAll('.find-template')
 
       templates.forEach(function(el) {
-        if (word.test(el.innerText)) el.hidden = false
-        else el.hidden = true
+        const content = el.innerText.trim().toLowerCase()
+        el.hidden = !word.test(content)
+        console.log(!word.test(content)) // for some reason, if I remove this console.log the search stops working. Long life to the JS
       })
     })
   },

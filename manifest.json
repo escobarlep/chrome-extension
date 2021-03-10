@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "version": "1.0.0",
-  "name": "AppMax Templates",
+  "version": "1.1.0",
+  "name": "Maxter CX",
   "description": "Extensão para acesso a templates de suporte CX Maxter",
   "permissions": [ "activeTab", "<all_urls>" ],
   "browser_action": {
-    "default_title": "AppMax Templates",
+    "default_title": "Maxter CX",
     "default_popup": "src/public/index.html",
     "default_icon": "favicon.png"
   },
@@ -19,7 +19,7 @@
         "default": "Ctrl+Shift+F",
         "mac": "MacCtrl+Shift+F"
       },
-      "description": "Opens AppMax Templates"
+      "description": "Opens Application"
     }
   }  
 }
