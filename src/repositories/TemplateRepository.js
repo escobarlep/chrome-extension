@@ -28,12 +28,6 @@ export default {
   getHistoryPrefix: function() {
     return this._prefixHistory
   },
-  getByName: function(name) {
-    name = name.trim().replaceAll(' ','-')
-    const fullName = `${this._prefix}${name}`
-    const data = this._storage.getItem(fullName)
-    return JSON.parse(data)
-  },
   getById: function(id) {
     let data = this.listAllTemplates()
     const template = data.find(templ => templ.id === Number(id))

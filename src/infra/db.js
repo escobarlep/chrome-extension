@@ -92,6 +92,7 @@ Um abraço, equipe Appmax!`,
     requiredFields: [
       'KEY_WORD_USER_NAME',
       'KEY_WORD_PARTNER_EMAIL',
+      'KEY_WORD_PARTNER_PHONE',
       'KEY_WORD_PARTNER_NAME',
       'KEY_WORD_CUSTOMER_FIRSTNAME',
       'KEY_WORD_CUSTOMER_TRACKING',

@@ -46,16 +46,14 @@ export default {
 
     data.requiredFields.forEach(field => {
       const toReplace = this._mapKeyWords.get(field)
-      if (field === 'KEY_WORD_CUSTOMER_STATUSTRACKING') template = template.replaceAll(field, this._mapKeyWords.get(field))
-      if (toReplace) template = template.replaceAll(field, this._mapKeyWords.get(field))
+      const regexField = new RegExp(field, 'g')
+      if (field === 'KEY_WORD_CUSTOMER_STATUSTRACKING') template = template.replace(regexField, this._mapKeyWords.get(field))
+      if (toReplace) template = template.replace(regexField, this._mapKeyWords.get(field))
     })
     return template
   },
   trackingStatusMessage: function(status) {
-    // Needed for email identation issues. I should probably solve it :D
-    return `
-<b>Verifiquei que a última atualização apresentada no site foi: ${status} </b><br><br>
-`
+    return `<b>Verifiquei que a última atualização apresentada no site foi: ${status} </b><br><br>`
   },
   updateData: function() {
     const customer = this._customerRepo.getCustomer()
