@@ -12,6 +12,7 @@ export default {
   idBtnClear: 'btn-clear-partner',
   idBtnCollect: 'btn-collect-partner',
   idBtnReportFraud: 'btn-report-fraud',
+  idOpenFraudList: 'btn-import-list-fraud',
   setData: function(data) {
     this._data = data
   },
@@ -25,11 +26,12 @@ export default {
           <i id="btn-update-partner" style="cursor:pointer" class="tiny material-icons waves-effect waves-light green-appmax btn-floating">save</i>
           <i id="btn-clear-partner" style="cursor:pointer" class="tiny material-icons waves-effect waves-light red darken-4 btn-floating">clear</i>
           <i id="btn-report-fraud" style="cursor:pointer" class="tiny material-icons waves-effect waves-light orange darken-4 btn-floating">warning</i>
+          <i id="btn-import-list-fraud" style="cursor:pointer" class="tiny material-icons waves-effect waves-light blue darken-4 btn-floating">cached</i>
         </div>
         <div class="row" style="padding: 15px">
           <div hidden=true id="partner-msg" class="col s12"></div>
           <div class="col s12">
-            <input placeholder="Razão Social" id="partner-name" type="text" value="${partner.name}">
+            <input class="${partner.isFraud || partner.hasNoFunds ? 'red-text': ''}" placeholder="Razão Social" id="partner-name" type="text" value="${partner.name}">
           </div>
           <div class="col s12">
             <input placeholder="CNPJ" id="partner-cnpj" type="text" value="${partner.cnpj}">
@@ -63,6 +65,5 @@ export default {
         break
     }
     return `<p class="${color}">${msg}</p>`
-
   }
 }
