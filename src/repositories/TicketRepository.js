@@ -33,6 +33,7 @@ export default {
     //if (!data.customer || !data.partner) return false
 
     const historyDTO = {
+      type: data.type,
       customerName: data.customer.name,
       customerOrder: data.customer.order,
       customerOrderUrl: data.customer.orderUrl,

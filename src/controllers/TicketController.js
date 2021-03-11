@@ -29,12 +29,20 @@ export default {
     this._partnerRepo.setStorage(this._mainApp.storage)
     this._templateRepo.setStorage(this._mainApp.storage)
   },
+  getTypeFromView: function() {
+    const type = this._mainApp.document.querySelectorAll(this.viewMain.classSelectType)
+    let selectedType 
+    type.forEach(element => {
+      if (element.checked) selectedType = element.getAttribute('data-type')
+    })
+    return selectedType ? selectedType : 'medium'
+  },
   collectAndSaveTicket: function() {
     const customer = this._customerRepo.getCustomer()
     const partner = this._partnerRepo.getPartner()
     const template = this._templateRepo.getLastUsedTempl()
-
-    this._repo.add({ customer, partner, template })
+    const type = this.getTypeFromView()
+    this._repo.add({ customer, partner, template, type })
     const btnClearCustomer = this._mainApp.document.getElementById(this.viewCustomer.idBtnClear)
     const btnClearPartner = this._mainApp.document.getElementById(this.viewPartner.idBtnClear)
     this._templateRepo.clearHistory()
