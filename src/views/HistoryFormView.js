@@ -1,5 +1,8 @@
 export default {
+  tabulator: null,
   id: 'app',
+  idTable: '#table',
+  idBtnDownloadXlsx: 'download-xlsx',
   window: '/src/public/history.html',
   _data: null,
   complexity: {
@@ -12,6 +15,41 @@ export default {
   },
   setData: function(data) {
     this._data = data
+  },
+  mountJSTable: function() {
+    if (!this._data) return
+    this.tabulator = new Tabulator(this.idTable, {
+      height:205,
+      data: this.mountJSData(),
+      layout:"fitColumns",
+      columns: this.mountJSColumns(),
+      rowClick:function(e, row){
+        console.log(row.getData());
+      },
+   });
+  },
+  mountJSColumns: function() {
+    return [
+      {title:"Data", field:"createdAt"},
+      {title:"Pedido", field:"customerOrder"},
+      {title:"Nome Cliente", field:"customerName"},
+      {title:"Nome Parceiro", field:"partnerName"},
+      {title:"Site", field:"partnerSite"},
+      {title:"Template", field:"templateName"},
+    ]
+  },
+  mountJSData: function() {
+    return this._data.map(data => {
+      const newDate = new Date(data.createdAt)
+      const hours = newDate.toTimeString().split(' ')[0]
+      const formatedDate = (new Intl.DateTimeFormat('pt-br')).format(newDate)
+      const date = data.createdAt.replace('T', ' ')
+      return {
+        ...data,
+        createdAt: date,
+        formatedDate: `${formatedDate} - ${hours}`
+      }
+    })
   },
   mountTBody: function() {
     const keys = Object.keys(this._data)
@@ -30,6 +68,7 @@ export default {
       `
       ).join('')
     })
+
     return tBody
   },
   mountCardSummary: function() {
@@ -37,7 +76,7 @@ export default {
 
     return totalByDate.map(date => {
       const tma = this.tmaCalc(this._data, date)
-      return ` 
+      return `
       <div class="col s12 m3 L2">
         <div class="card-panel black">
           <p class="center white-text">
@@ -54,9 +93,7 @@ export default {
       const sumUp = this.mountCardSummary(this._data)
       const tBody = this.mountTBody(this._data)
       return `
-        <div class="row">
-          ${sumUp}
-        </div>
+        <div class="row">${sumUp}</div>
         <table class="responsive-table striped highlight">
           <thead>
             <tr>
