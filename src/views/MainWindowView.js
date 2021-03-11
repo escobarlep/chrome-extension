@@ -5,7 +5,7 @@ export default {
   idCounter: 'nav-total-tickets-count',
   idLogOut: 'user-logout',
   idSaveTicket: 'save-ticket',
-  classSelectType: '.select-type',
+  classSelectComplexity: '.select-complexity',
   idOpenHist: 'open-history',
   setData: function(data) {
     this._data = data
@@ -36,13 +36,13 @@ export default {
             <p>
               <p class="center">Nível de complexidade do atendimento</p>
               <label>
-                <input data-type="easy" class="with-gap select-type" name="group1" type="radio"><span>Fácil</span>
+                <input data-complexity="low" class="with-gap select-complexity" name="group1" type="radio"><span>Baixa</span>
               </label> 
               <label>
-                <input data-type="medium" class="with-gap select-type" name="group1" type="radio" checked="checked"><span>Médio</span>
+                <input data-complexity="medium" class="with-gap select-complexity" name="group1" type="radio" checked="checked"><span>Média</span>
               </label> 
               <label>
-                <input data-type="hard" class="with-gap select-type" name="group1" type="radio"><span>Difícil</span>
+                <input data-complexity="high" class="with-gap select-complexity" name="group1" type="radio"><span>Alta</span>
               </label>
             </p>
           </div>

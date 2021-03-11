@@ -63,7 +63,7 @@ export default {
     }
     this.viewFraud.setData(data)
     this._mainApp.renderView(this.viewFraud)
-    partner.isFraud = true
+    partner.reportedAsFraud = true
     this._repo.save(partner)
   },
   setMessage: function(type, msg){

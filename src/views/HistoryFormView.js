@@ -2,6 +2,11 @@ export default {
   id: 'app',
   window: '/src/public/history.html',
   _data: null,
+  complexity: {
+    high: 'Alta',
+    medium: 'Média',
+    low: 'Baixa'
+  },
   setTmaCalc: function(func) {
     this.tmaCalc = func
   },
@@ -13,15 +18,16 @@ export default {
     let tBody = ''
     keys.forEach(key => {
       tBody += this._data[key].map(history => `
-          <tr class="${history.partnerFraud ? 'red-text' : '' }">
-            <td><span hidden>${history.createdAt}</span>${history.formatedDate}</td>
-            <td>${history.customerOrder}</td>
-            <td>${history.customerName}</td>
-            <td>${history.partnerName}</td>
-            <td>${history.partnerSite}</td>
-            <td>${history.templateName}</td>
-          </tr>
-        `
+        <tr class="${history.partnerFraud ? 'red-text' : '' }">
+          <td><span hidden>${history.createdAt}</span>${history.formatedDate}</td>
+          <td>${history.customer ? history.customer.order : history.customerOrder}</td>
+          <td>${history.customer ? history.customer.name : history.customerName}</td>
+          <td>${history.partner ? history.partner.name : history.partnerName}</td>
+          <td>${history.partner ? history.partner.site : history.partnerSite}</td>
+          <td>${history.template ? history.template.name : ''}</td>
+          <td>${history.complexity && this.complexity[history.complexity] ? this.complexity[history.complexity] : ''}</td>
+        </tr>
+      `
       ).join('')
     })
     return tBody
@@ -43,7 +49,6 @@ export default {
     `
     }).join('')
   },
-  
   template: function() {
     if (this._data) {
       const sumUp = this.mountCardSummary(this._data)
@@ -61,6 +66,7 @@ export default {
               <th>Nome do Parceiro</th>
               <th>Site</th>
               <th>Template Selecionada</th>
+              <th>Complexidade</th>
             </tr>
           </thead>
           <tbody>
