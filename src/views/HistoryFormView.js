@@ -99,8 +99,8 @@ export default {
   },
   template: function() {
     if (this._data) {
-      const sumUp = this.mountCardSummary(this._data)
-      const tBody = this.mountTBody(this._data)
+      const sumUp = this.mountCardSummary()
+      const tBody = this.mountTBody()
       return `
         <div class="row">${sumUp}</div>
         <table class="responsive-table striped highlight">

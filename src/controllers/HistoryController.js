@@ -26,6 +26,10 @@ export default {
     this.view.setData(this._repo.getAll())
     this.view.mountJSTable()
     this._activateViewListeners()
+    const doc = this.document.getElementById(this.view.id)
+    this.view.setData(this.summarize())
+    this.view.setTmaCalc(this.tmaCalc.bind(this))
+    doc.innerHTML = this.view.mountCardSummary()
   },
   summarize: function() {
     const organizer = []
