@@ -22,16 +22,13 @@ export default {
       height:205,
       data: this.mountJSData(),
       layout:"fitColumns",
-      columns: this.mountJSColumns(),
-      rowClick:function(e, row){
-        console.log(row.getData());
-      },
+      columns: this.mountJSColumns()
    });
   },
   mountJSColumns: function() {
     return [
       {title:"Data", field:"createdAt"},
-      {title:"Pedido", field:"customerOrder"},
+      {title:"Pedido", field:"customerOrder", formatter:"html"},
       {title:"Nome Cliente", field:"customerName"},
       {title:"Nome Parceiro", field:"partnerName"},
       {title:"Site", field:"partnerSite"},
@@ -43,9 +40,21 @@ export default {
       const newDate = new Date(data.createdAt)
       const hours = newDate.toTimeString().split(' ')[0]
       const formatedDate = (new Intl.DateTimeFormat('pt-br')).format(newDate)
-      const date = data.createdAt.replace('T', ' ')
+      const date = data.createdAt.replace('T', ' ').slice(0, -5)
+      let customerOrder = data.customer && data.customer.order ? data.customer.order : data.customerOrder
+      if (data.customer && data.customer.orderUrl) {
+        customerOrder = `<a target="blank" href="${data.customer.orderUrl}">${data.customer.order}</a>`
+      }
+      const customerName = data.customer && data.customer.name ? data.customer.name : data.customerName
+      const partnerName = data.partner && data.partner.name ? data.partner.name : data.partnerName
+      const partnerSite = data.partner && data.partner.site ? data.partner.site : data.partnerSite
+      const templateName = data.template && data.template.name ? data.template.name : data.templateName
       return {
-        ...data,
+        customerOrder,
+        customerName,
+        partnerName,
+        partnerSite,
+        templateName,
         createdAt: date,
         formatedDate: `${formatedDate} - ${hours}`
       }
