@@ -13,6 +13,9 @@ export default {
   setTmaCalc: function(func) {
     this.tmaCalc = func
   },
+  setComplexityCalc: function(func) {
+    this.complexityCalc = func
+  },
   setData: function(data) {
     this._data = data
   },
@@ -85,12 +88,17 @@ export default {
 
     return totalByDate.map(date => {
       const tma = this.tmaCalc(this._data, date)
+      const complexity = this.complexityCalc(this._data[date])
       return `
       <div class="col s12 m3 L2">
         <div class="card-panel black">
           <p class="center white-text">
             ${date} : ${this._data[date].length} <br>
-            TMA = ${tma} (Min/Tickets)
+            TMA = ${tma} (Min/Tickets) <br>
+            Complexidade: <br>
+            Alta ${complexity.high} - ${complexity.highPercentage.toFixed(2)}%<br>
+            Média ${complexity.medium} - ${complexity.mediumPercentage.toFixed(2)}%<br>
+            Baixa ${complexity.low} - ${complexity.lowPercentage.toFixed(2)}%<br>
           </p>
         </div>
       </div>

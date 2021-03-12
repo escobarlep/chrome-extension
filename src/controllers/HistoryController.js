@@ -29,7 +29,23 @@ export default {
     const doc = this.document.getElementById(this.view.id)
     this.view.setData(this.summarize())
     this.view.setTmaCalc(this.tmaCalc.bind(this))
+    this.view.setComplexityCalc(this.complexityCalc.bind(this))
     doc.innerHTML = this.view.mountCardSummary()
+  },
+  complexityCalc: function(history) {
+    const complexity = { high: 0, medium: 0, low: 0 }
+    let total = 0
+    history.forEach(hist => {
+      if (hist.complexity) {
+        complexity[hist.complexity]++
+        total++
+      }
+    })
+    complexity.highPercentage = total !== 0 ? (complexity.high * 100) / total  : 0
+    complexity.mediumPercentage = total !== 0 ? (complexity.medium * 100) / total : 0
+    complexity.lowPercentage = total !== 0 ? (complexity.low * 100) / total : 0
+    console.log(complexity)
+    return complexity
   },
   summarize: function() {
     const organizer = []
