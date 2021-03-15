@@ -305,8 +305,8 @@ Abraço, equipe Appmax!`,
   },
   {
     id: 9,
-    name: 'Solicitação cancelamento masculino',
-    keyWords: ['cancelamento', 'masculino'],
+    name: 'Compra duplicada masculino',
+    keyWords: ['compra', 'duplicada', 'masculino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
       'KEY_WORD_USER_NAME',
@@ -319,7 +319,7 @@ Abraço, equipe Appmax!`,
     ],
     content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
 Tudo bem com você? Espero que sim! <br>
-Me chamo KEY_WORD_USER_NAME, faço parte da equipe de suporte ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
+Me chamo KEY_WORD_USER_NAME, faço parte da equipe de suporte ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
 
 Entendi a sua solicitação e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário, ou seja, por seu pagamento.<br>
 Mas fique tranquilo que estou aqui para te ajudar! Estou intermediando o contato com a empresa vendedora, para que sua solicitação seja atendida o mais rápido possível. E este é o e-mail para contatá-los diretamente caso você tenha mais dúvidas:<br><br>
@@ -331,7 +331,7 @@ _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>,<br><br>
 
-O Sr. KEY_WORD_CUSTOMER_FIRSTNAME precisa de auxílio para efetuar o cancelamento da sua compra. Você pode por favor e retornar o contato à ele para entender melhor a situação e ajudá-lo?!<br><br>
+O Sr. KEY_WORD_CUSTOMER_FIRSTNAME precisa de auxílio pois informou que sua compra foi <b>duplicada</b>. Você pode por favor e retornar o contato à ele para entender melhor a situação e ajudá-lo?!<br><br>
 
 <b>DADOS DO CLIENTE:<br>
 NOME: KEY_WORD_CUSTOMER_FULLNAME<br>
@@ -347,8 +347,8 @@ Equipe Appmax.`,
   },
   {
     id: 10,
-    name: 'Solicitação cancelamento feminino',
-    keyWords: ['cancelamento', 'feminino'],
+    name: 'Compra duplicada feminino',
+    keyWords: ['compra', 'feminino', 'duplicada'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
       'KEY_WORD_USER_NAME',
@@ -361,7 +361,7 @@ Equipe Appmax.`,
     ],
     content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
 Tudo bem com você? Espero que sim!<br>
-Me chamo KEY_WORD_USER_NAME, faço parte da equipe de suporte ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
+Me chamo KEY_WORD_USER_NAME, faço parte da equipe de suporte ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
 
 Entendi a sua solicitação e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário, ou seja, por seu pagamento.<br>
 Mas fique tranquila que estou aqui para te ajudar! Estou intermediando o contato com a empresa vendedora, para que sua solicitação seja atendida o mais rápido possível. E este é o e-mail para contatá-los diretamente caso você tenha mais dúvidas:<br><br>
@@ -373,7 +373,7 @@ _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>,<br><br>
 
-A Sra. KEY_WORD_CUSTOMER_FIRSTNAME precisa de auxílio para efetuar o cancelamento da sua compra. Você pode por favor e retornar o contato à ela para entender melhor a situação e ajudá-la?!<br><br>
+A Sra. KEY_WORD_CUSTOMER_FIRSTNAME precisa de auxílio pois informou que sua compra foi <b>duplicada</b> Você pode por favor e retornar o contato à ela para entender melhor a situação e ajudá-la?!<br><br>
 
 <b>DADOS DA CLIENTE:<br>
 NOME: KEY_WORD_CUSTOMER_FULLNAME<br>
