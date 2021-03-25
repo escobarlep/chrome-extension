@@ -29,7 +29,7 @@ export default {
             <label for="user-name">Nome</label>
           </div>
           <div class="input-field col s12 center">
-          <button class="waves-effect waves-light btn indigo darken-4" id="user-register">Cadastrar</button>  
+            <button class="waves-effect waves-light btn indigo darken-4" id="user-register">Cadastrar</button>  
           </div>
         </fieldset>
       </div>
