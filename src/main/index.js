@@ -48,16 +48,19 @@ function collectCustomer() {
 
   var tracking = document.getElementById('trackingCode')
   customer.tracking = tracking ? tracking.value.trim() : ''
-  
-  var elementSite = document.querySelectorAll('.box-header.with-border strong')
 
-  if (elementSite.length) {
-    var site = elementSite[1].innerText
-    site = site ? site.replace('Site:', '').trim() : ''
+  var elementPartner = document.querySelectorAll('.box-header.with-border strong')
+
+  if (elementPartner.length) {
+    var completString = elementPartner[1].innerText
+    var hasMultipleInfo = completString && completString.split('|').length
+    var splitedString = hasMultipleInfo ? completString.split('|') : ['','']
+    var site = splitedString[0].replace('Site:', '').trim()
+    var partnerName = splitedString[1].replace('Empresa:', '').trim()
     window.localStorage.setItem('app-max-site', site)
     var textArea = document.createElement('textArea')
     textArea.type = 'hidden'
-    textArea.innerText = site
+    textArea.innerText = partnerName
     document.body.appendChild(textArea)
     textArea.select()
     document.execCommand('copy')
