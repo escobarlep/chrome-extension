@@ -1,22 +1,51 @@
 import TicketRepository from '/src/repositories/TicketRepository.js'
+import UserRepository from '/src/repositories/UserRepository.js'
 import HistoryFormView from '/src/views/HistoryFormView.js'
 
 export default {
   _repo: TicketRepository,
+  _userRepo: UserRepository,
   view: HistoryFormView,
   initializer: function(storage, document){
     this.setStorage(storage)
     this.document = document
-    this.updateView()
+    //this.updateView()
+    this.updateViewJS()
   },
   setStorage: function (storage) {
     this._repo.setStorage(storage)
+    this._userRepo.setStorage(storage)
   },
   updateView: function() {
     const doc = this.document.getElementById(this.view.id)
     this.view.setData(this.summarize())
     this.view.setTmaCalc(this.tmaCalc.bind(this))
     doc.innerHTML = this.view.template()
+  },
+  updateViewJS: function() {
+    this.view.setData(this._repo.getAll())
+    this.view.mountJSTable()
+    this._activateViewListeners()
+    const doc = this.document.getElementById(this.view.id)
+    this.view.setData(this.summarize())
+    this.view.setTmaCalc(this.tmaCalc.bind(this))
+    this.view.setComplexityCalc(this.complexityCalc.bind(this))
+    doc.innerHTML = this.view.mountCardSummary()
+  },
+  complexityCalc: function(history) {
+    const complexity = { high: 0, medium: 0, low: 0 }
+    let total = 0
+    history.forEach(hist => {
+      if (hist.complexity) {
+        complexity[hist.complexity]++
+        total++
+      }
+    })
+    complexity.highPercentage = total !== 0 ? (complexity.high * 100) / total  : 0
+    complexity.mediumPercentage = total !== 0 ? (complexity.medium * 100) / total : 0
+    complexity.lowPercentage = total !== 0 ? (complexity.low * 100) / total : 0
+    console.log(complexity)
+    return complexity
   },
   summarize: function() {
     const organizer = []
@@ -56,4 +85,20 @@ export default {
 
     return tma
   },
+  downloadXlsx: function() {
+    const date = (new Intl.DateTimeFormat('pt-br')).format(new Date())
+    let user = this._userRepo.getName()
+    if (user) {
+      const space = new RegExp(' ', 'g')
+      user = user.trim().replace(space, '_')
+    }
+    this.view.tabulator.download("xlsx", `${date}-${user}-MaxterCXReport.xlsx`, {sheetName: `${user}-MaxterCXReport`});
+  },
+  _activateViewListeners: function() {
+    const btnDownloadXlsx = this.document.getElementById(this.view.idBtnDownloadXlsx)
+    const bindCallDownload = this.downloadXlsx.bind(this)
+    btnDownloadXlsx.addEventListener('click', function() {
+      bindCallDownload()
+    })
+  }
 }

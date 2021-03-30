@@ -7,10 +7,20 @@
   <title>Histórico AppMax</title>
   <link rel="stylesheet" href="./css/icon.css">
   <link rel="stylesheet" href="./css/materialize.min.css">
+  <link rel="stylesheet" href="./css/history.css">
+  <link rel="stylesheet" href="./css/tabulator.min.css" >
+
+  <script type="text/javascript" src="./js/tabulator.min.js"></script>
+  <script type="text/javascript" src="./js/xlsx.full.min.js"></script>
   <script src="./js/materialize.min.js"></script>
 </head>
 <body>
   <div id="app" class="row"></div>
+  
+  <div class="row"><div>
+    <button id="download-xlsx">Download XLSX</button>
+  </div></div>
+  <div id="table" class="row"></div>
   <script type="module" src="/src/main/history.js"></script>
 </body>
 </html>
