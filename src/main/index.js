@@ -68,8 +68,8 @@ function collectCustomer() {
     document.body.removeChild(textArea)
   }
 
-  if (customer.tracking) {
-    window.open(`https://t.17track.net/pt#nums=${customer.tracking}`)
+  // if (customer.tracking) {
+    // window.open(`https://t.17track.net/pt#nums=${customer.tracking}`)
     // fetch('https://api-track.ebanx.com/production/track', {
     //   method: 'POST',
     //   headers: {
@@ -103,7 +103,7 @@ function collectCustomer() {
     //     window.localStorage.setItem('app-max-order-status', description)
     //   })
     //   .catch(err => console.log('mail API integration failed', err))
-  }
+  // }
 
   return customer
 }
@@ -146,7 +146,8 @@ function collectPartner() {
 function getTrackingData() {
   var trackingStatus = window.localStorage.getItem('app-max-order-status')
   if (!trackingStatus) return false
-  return { trackingStatus }
+  window.open(`https://t.17track.net/pt#nums=${customer.tracking}`)
+//  return { trackingStatus }
 }
 
 function getCurrentURL() {
