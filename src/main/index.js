@@ -8,7 +8,7 @@ import TicketController from '/src/controllers/TicketController.js'
 
 
 function collectCustomer() {
-  
+
   var fullUrl = window.location.href
     .replace('https://', '')
     .split('/')
@@ -17,10 +17,10 @@ function collectCustomer() {
   const appMaxUrl = new RegExp('appmax', 'gi')
   const appMaxCustomerDomain = new RegExp('order', 'gi')
   if (!url || !appMaxUrl.test(url) || !appMaxCustomerDomain.test(domain)) return false
-  
+
   window.localStorage.removeItem('app-max-order-status')
   window.localStorage.removeItem('app-max-site')
-  var customer = {}  
+  var customer = {}
   var elementForUser = document.getElementsByClassName('username')
   var text = elementForUser.length ? elementForUser[0].innerText : []
   var searchForNameByIndex = text.lastIndexOf('#')
@@ -38,7 +38,7 @@ function collectCustomer() {
   }
   customer.order = order ? order.trim() : ''
   customer.orderUrl = window.location.href
-  
+
   var moreInfo = document.getElementsByTagName('address')
   moreInfo = moreInfo[1].innerText
   var cpf = moreInfo.slice(0,16)
@@ -69,39 +69,40 @@ function collectCustomer() {
   }
 
   if (customer.tracking) {
-    fetch('https://api-track.ebanx.com/production/track', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json; charset=utf-8'
-      },
-      body: JSON.stringify({
-        "trackingCode": customer.tracking,
-        "locale":"pt"
-      })
-    })
-      .then(res => res.json())
-      .then(res => {
-        if (!res.length) return 
-        var trackingResult = res[0]
-        if ( !'checkpoints' in trackingResult ) return
-        var { checkpoints } = trackingResult
-        if ( !checkpoints.length ) return
-        var currentCheckpoint = {}
-        checkpoints.forEach(checkpoint => {
-          if (!currentCheckpoint.length) {
-            currentCheckpoint = checkpoint
-          } else {
-            var currentDate = new Date(currentCheckpoint.date)
-            if (currentDate < (new Date(checkpoint.date))) currentCheckpoint = checkpoint
-          }
-        })
-        var newDate = new Date(currentCheckpoint.date)
-        var formatedDate = (new Intl.DateTimeFormat('pt-br')).format(newDate)
-        var description = currentCheckpoint.description.replace(/^/, `${formatedDate} - `)
-        window.localStorage.setItem('app-max-order-status', description)
-      })
-      .catch(err => console.log('mail API integration failed', err))
+    window.open(`https://t.17track.net/pt#nums=${customer.tracking}`)
+    // fetch('https://api-track.ebanx.com/production/track', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json; charset=utf-8'
+    //   },
+    //   body: JSON.stringify({
+    //     "trackingCode": customer.tracking,
+    //     "locale":"pt"
+    //   })
+    // })
+    //   .then(res => res.json())
+    //   .then(res => {
+    //     if (!res.length) return
+    //     var trackingResult = res[0]
+    //     if ( !'checkpoints' in trackingResult ) return
+    //     var { checkpoints } = trackingResult
+    //     if ( !checkpoints.length ) return
+    //     var currentCheckpoint = {}
+    //     checkpoints.forEach(checkpoint => {
+    //       if (!currentCheckpoint.length) {
+    //         currentCheckpoint = checkpoint
+    //       } else {
+    //         var currentDate = new Date(currentCheckpoint.date)
+    //         if (currentDate < (new Date(checkpoint.date))) currentCheckpoint = checkpoint
+    //       }
+    //     })
+    //     var newDate = new Date(currentCheckpoint.date)
+    //     var formatedDate = (new Intl.DateTimeFormat('pt-br')).format(newDate)
+    //     var description = currentCheckpoint.description.replace(/^/, `${formatedDate} - `)
+    //     window.localStorage.setItem('app-max-order-status', description)
+    //   })
+    //   .catch(err => console.log('mail API integration failed', err))
   }
 
   return customer

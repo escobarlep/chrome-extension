@@ -24,7 +24,6 @@ Mas fique tranquila que estou aqui para te ajudar! Estou intermediando o contato
 <b>Telefone: KEY_WORD_PARTNER_PHONE<br>
 E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br><br>
 
-Desde já, informo que caso a empresa vendedora não lhe responda, ou não resolva o seu problema satisfatoriamente no prazo de até 3 dias úteis, basta você responder esse email que seguirei com o atendimento por aqui.<br>
 _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>, <br><br>
@@ -38,8 +37,9 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
 
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
+<b>Seu contato deve ocorrer no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
 
+Informo que este atendimento aparecerá como resolvido, mas não se preocupe estamos ciente do andamento de sua solicitação, se precisar é só chamar que reabrimos para seguir com o atendimento.<br>
 Um Abraço, equipe Appmax!`,
   },
   {
@@ -62,12 +62,13 @@ Tudo bem com você? Espero que sim!<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte Appmax e vou te auxiliar neste atendimento!<br><br>
 
 Entendi seu questionamento e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário, ou seja, por seu pagamento.<br>
-Mas fique tranquilo que estou aqui para te ajudar! Estou intermediando o contato com a empresa vendedora, para que sua solicitação seja atendida o mais rápido possível. E este é o e-mail para contatá-los diretamente caso você tenha mais dúvidas: <br><br>
+Mas fique tranquilo que estou aqui para te ajudar! <br><br>
+
+Estou intermediando o contato com a empresa vendedora, para que sua solicitação seja atendida o mais rápido possível. E este é o e-mail para contatá-los diretamente caso você tenha mais dúvidas: <br><br>
 
 <b>Telefone: KEY_WORD_PARTNER_PHONE<br>
 E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br><br>
 
-Desde já, informo que caso a empresa vendedora não lhe responda, ou não resolva o seu problema satisfatoriamente no prazo de até 3 dias úteis, basta você responder esse email que seguirei com o atendimento por aqui.<br>
 _____________ <br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>, <br><br>
@@ -81,8 +82,9 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
 
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
+<b>Seu contato deve ocorrer no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
 
+Informo que este atendimento aparecerá como resolvido, mas não se preocupe estamos ciente do andamento de sua solicitação, se precisar é só chamar que reabrimos para seguir com o atendimento.<br>
 Um abraço, equipe Appmax!`,
   },
   {
@@ -98,15 +100,14 @@ Um abraço, equipe Appmax!`,
       'KEY_WORD_CUSTOMER_TRACKING',
       'KEY_WORD_CUSTOMER_STATUSTRACKING',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?!<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do suporte ao cliente Appmax e vou te auxiliar neste atendimento!<br><br>
 
 Entendi sua solicitação e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de pagamentos.<br><br>
 
 Porém a empresa <b>KEY_WORD_PARTNER_NAME</b> disponibilizou essa informação em nosso sistema.<br><br>
 
-Para consultar o status de entrega do seu pedido é necessário colocar o código de rastreio <b>KEY_WORD_CUSTOMER_TRACKING </b> no site a seguir https://track.ebanx.com/pt <br><br>
+🔎 Para consultar o status de entrega do seu pedido é necessário colocar o código de rastreio <b>KEY_WORD_CUSTOMER_TRACKING </b> no site a seguir https://track.ebanx.com/pt <br><br>
 
 <b>KEY_WORD_CUSTOMER_STATUSTRACKING</b>
 
@@ -136,8 +137,7 @@ Equipe Appmax.`,
       'KEY_WORD_CUSTOMER_ORDER',
       'KEY_WORD_PARTNER_PHONE',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e vou te auxiliar neste atendimento!<br><br>
 
 Entendi seu questionamento e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário, ou seja, por seu pagamento.<br>
@@ -146,7 +146,6 @@ Mas fique tranquilo que estou aqui para te ajudar! Estou intermediando o contato
 <b>Telefone: KEY_WORD_PARTNER_PHONE<br>
 E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br><br>
 
-Desde já, informo que caso a empresa vendedora não lhe responda, ou não resolva o seu problema satisfatoriamente no prazo de até 3 dias úteis, basta você responder esse email que seguirei com o atendimento por aqui.<br>
 _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>,<br><br>
@@ -160,10 +159,10 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
 
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
+<b>Seu contato deve ocorrer no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
 
-Um abraço,<br>
-Equipe Appmax.`,
+Informo que este atendimento aparecerá como resolvido, mas não se preocupe estamos ciente do andamento de sua solicitação, se precisar é só chamar que reabrimos para seguir com o atendimento.<br>
+Um abraço, equipe Appmax.`,
   },
   {
     id: 5,
@@ -180,8 +179,7 @@ Equipe Appmax.`,
       'KEY_WORD_CUSTOMER_EMAIL',
       'KEY_WORD_CUSTOMER_ORDER',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte Appmax e vou te auxiliar neste atendimento! <br><br>
 
 Entendi seu questionamento e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário, ou seja, por seu pagamento.<br>
@@ -189,7 +187,6 @@ Mas fique tranquila que estou aqui para te ajudar! Estou intermediando o contato
 
 <b>E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br><br>
 
-Desde já, informo que caso a empresa vendedora não lhe responda, ou não resolva o seu problema satisfatoriamente no prazo de até 3 dias úteis, basta você responder esse email que seguirei com o atendimento por aqui.<br>
 _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>,<br><br>
@@ -203,10 +200,10 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
 
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
+<b>Seu contato deve ocorrer no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
 
-Um abraço,<br>
-Equipe Appmax.`,
+Informo que este atendimento aparecerá como resolvido, mas não se preocupe estamos ciente do andamento de sua solicitação, se precisar é só chamar que reabrimos para seguir com o atendimento.<br>
+Um abraço, equipe Appmax.`,
   },
   {
     id: 6,
@@ -220,8 +217,7 @@ Equipe Appmax.`,
       'KEY_WORD_PARTNER_EMAIL',
       'KEY_WORD_PARTNER_PHONE',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, como você está?<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
 
 Gostaria de esclarecer que a APPMAX é uma plataforma de pagamentos, sendo responsável pela transação com cartão de crédito ou boleto bancário.<br><br>
@@ -305,8 +301,8 @@ Abraço, equipe Appmax!`,
   },
   {
     id: 9,
-    name: 'Compra duplicada masculino',
-    keyWords: ['compra', 'duplicada', 'masculino'],
+    name: 'Solicitacao Cancelamento Masculino',
+    keyWords: ['solicitacao', 'cancelamento', 'masculino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
       'KEY_WORD_USER_NAME',
@@ -317,8 +313,7 @@ Abraço, equipe Appmax!`,
       'KEY_WORD_CUSTOMER_EMAIL',
       'KEY_WORD_CUSTOMER_ORDER',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim! <br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?<br>
 Me chamo KEY_WORD_USER_NAME, faço parte da equipe de suporte ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
 
 Entendi a sua solicitação e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário, ou seja, por seu pagamento.<br>
@@ -331,7 +326,7 @@ _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>,<br><br>
 
-O Sr. KEY_WORD_CUSTOMER_FIRSTNAME precisa de auxílio pois informou que sua compra foi <b>duplicada</b>. Você pode por favor e retornar o contato à ele para entender melhor a situação e ajudá-lo?!<br><br>
+O Sr. KEY_WORD_CUSTOMER_FIRSTNAME precisa de auxílio pois deseja cancelar sua compra. Você pode por favor e retornar o contato à ele para entender melhor a situação e ajudá-lo?!<br><br>
 
 <b>DADOS DO CLIENTE:<br>
 NOME: KEY_WORD_CUSTOMER_FULLNAME<br>
@@ -340,15 +335,14 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER<br><br></b>
 
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
+<b>Seu contato deve ocorrer no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
 
-Um abraço,<br>
-Equipe Appmax.`,
+Um abraço, equipe Appmax.`,
   },
   {
     id: 10,
-    name: 'Compra duplicada feminino',
-    keyWords: ['compra', 'feminino', 'duplicada'],
+    name: 'Solicitacao cancelamento feminino',
+    keyWords: ['solicitacao', 'cancelamento', 'feminino'],
     requiredFields: [
       'KEY_WORD_CUSTOMER_FIRSTNAME',
       'KEY_WORD_USER_NAME',
@@ -359,8 +353,7 @@ Equipe Appmax.`,
       'KEY_WORD_CUSTOMER_EMAIL',
       'KEY_WORD_CUSTOMER_ORDER',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?<br>
 Me chamo KEY_WORD_USER_NAME, faço parte da equipe de suporte ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
 
 Entendi a sua solicitação e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário, ou seja, por seu pagamento.<br>
@@ -373,7 +366,7 @@ _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>,<br><br>
 
-A Sra. KEY_WORD_CUSTOMER_FIRSTNAME precisa de auxílio pois informou que sua compra foi <b>duplicada</b> Você pode por favor e retornar o contato à ela para entender melhor a situação e ajudá-la?!<br><br>
+A Sra. KEY_WORD_CUSTOMER_FIRSTNAME precisa de auxílio pois deseja cancelar sua compra. Você pode por favor e retornar o contato à ela para entender melhor a situação e ajudá-la?!<br><br>
 
 <b>DADOS DA CLIENTE:<br>
 NOME: KEY_WORD_CUSTOMER_FULLNAME<br>
@@ -382,7 +375,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER<br><br></b>
 
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
+<b>Seu contato deve ocorrer no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
 
 Um abraço, equipe Appmax.`,
   },
@@ -398,14 +391,13 @@ Um abraço, equipe Appmax.`,
       'KEY_WORD_PARTNER_NAME',
       'KEY_WORD_PARTNER_EMAIL',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, Tudo bem com você? Espero que sim!<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e vou te auxiliar neste atendimento!<br><br>
 
 É importante esclarecer que o E-book é um livro virtual bem legal! Ele é apresentado em um formato digital que pode ser lido em computadores, celulares, tablets e outros dispositivos digitais e contém diversas informações e curiosidades.<br>
 Você realizou a compra do seguinte e-book:<br><br>
 
-<b>"KEY_WORD_PRODUCT_NAME"</b><br><br>
+<b>"NOME DO PRODUTO"</b><br><br>
 
 Porém o pagamento consta como <b>PENDENTE</b>, assim que o pagamento for realizado o e-book é enviado para o e-mail cadastrado: <b>KEY_WORD_CUSTOMER_EMAIL</b>.<br><br>
 
@@ -428,8 +420,7 @@ Abraço Equipe Appmax!`,
       'KEY_WORD_PARTNER_NAME',
       'KEY_WORD_PARTNER_EMAIL',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, Tudo bem com você? Espero que sim!<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e vou te auxiliar neste atendimento!<br><br>
 
 É importante esclarecer que o E-book é um livro virtual bem legal! Ele é apresentado em um formato digital que pode ser lido em computadores, celulares, tablets e outros dispositivos digitais e contém diversas informações e curiosidades.<br>
@@ -445,6 +436,7 @@ Caso você tenha mais dúvidas, pode entrar em contato com a loja vendedora atra
 
 <b>E-mail: KEY_WORD_PARTNER_EMAIL</b><br><br>
 
+Informo que este atendimento aparecerá como resolvido, mas não se preocupe estamos ciente do andamento de sua solicitação, se precisar é só chamar que reabrimos para seguir com o atendimento.<br>
 Espero ter lhe ajudado <br>
 Abraço Equipe Appmax!`,
   },
@@ -480,8 +472,7 @@ Abraço, equipe Appmax!`,
       'KEY_WORD_USER_NAME',
       'KEY_WORD_PARTNER_NAME',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, como você está?<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e darei continuidade ao seu atendimento.<br><br>
 
 Conforme o combinado, caso você não fosse atendido devidamente, nós da Appmax, tomaríamos uma medida de ação, a fim de resolver o problema.<br>
@@ -511,26 +502,34 @@ Abraço Equipe Appmax.`,
       'KEY_WORD_CUSTOMER_FIRSTNAME',
       'KEY_WORD_USER_NAME',
       'KEY_WORD_CUSTOMER_TRACKING',
+      'KEY_WORD_CUSTOMER_STATUSTRACKING',
+      'KEY_WORD_PARTNER_NAME',
+      'KEY_WORD_PARTNER_EMAIL',
     ],
     content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
 Tudo bem com você? Espero que sim!<br>
 Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou te auxiliar neste atendimento! <br><br>
 
-Verifiquei o código de rastreio <b>(KEY_WORD_CUSTOMER_TRACKING)</b> referente à sua compra e percebi que consta como entregue! <br><br>
+De acordo com o código de rastreio disponibilizado em nosso sistema, sua compra está com o seguinte status: <br>
+<b>KEY_WORD_CUSTOMER_STATUSTRACKING<br>
+Código de rastreio: KEY_WORD_CUSTOMER_TRACKING<br><br></b>
 
-Gostaria de questionar a você se já recebeu seu produto?<br><br>
+Ainda sim, se você possuir alguma dúvida referente a sua compra, você deve entrar em contato com a empresa responsável pela venda:<br><br>
 
-Caso sim, lhe desejamos um ótimo uso deste! <br>
-Ficamos a sua disposição.<br>
-Atendimento Appmax <3`,
+<b>Empresa responsável: KEY_WORD_PARTNER_NAME<br>
+E-mail de suporte: KEY_WORD_PARTNER_EMAIL<br><br></b>
+
+Espero que eu tenha conseguido lhe ajudar! Caso contrário, permaneço à disposição. 😊<br>
+E, se você quiser, poderia avaliar este atendimento? Sua opinião é muito importante para nós!<br><br>
+
+Um abraço - Atendimento Appmax`,
   },
   {
     id: 16,
     name: 'Comprovante estorno cartao',
     keyWords: ['comprovante', 'estorno'],
     requiredFields: ['KEY_WORD_CUSTOMER_FIRSTNAME', 'KEY_WORD_USER_NAME'],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e vou te auxiliar neste atendimento.<br><br>
 
 Conforme combinado, informamos que foi solicitado o estorno de sua compra para administradora do seu cartão de crédito, conforme o <b>comprovante em anexo</b>.<br>
@@ -546,8 +545,7 @@ Atendimento Appmax`,
     name: 'Comprovante estorno boleto',
     keyWords: ['comprovante', 'estorno', 'boleto'],
     requiredFields: ['KEY_WORD_CUSTOMER_FIRSTNAME', 'KEY_WORD_USER_NAME'],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, como você está!<br>
 Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou te auxiliar neste atendimento!<br><br>
 
 Conforme o combinado, informo que foi solicitado o estorno de sua compra realizada através de boleto bancário.<br>
@@ -566,20 +564,29 @@ Atendimento Appmax`,
       'KEY_WORD_USER_NAME',
       'KEY_WORD_PARTNER_NAME',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
-Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou te auxiliar neste atendimento!<br><br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, como você está? Espero que bem 😊<br>
+Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou seguir com o seu atendimento!<br><br>
 
 Lamento em saber que a situação com a empresa vendedora <b>KEY_WORD_PARTNER_NAME</b> não se resolveu como você gostaria. Mas conforme o combinado, caso você não fosse atendido devidamente, nós da Appmax, tomaríamos uma medida de ação, a fim de resolver o problema.<br>
 Com isso, venho lhe propor a opção de estorno de sua compra, caso tenha interesse, sendo assim, peço que sinalize em resposta deste email se você prefere o estorno ou aguardar pelo produto.<br><br>
 
 <b>Peço que responda este email em até 48 horas.</b><br><br>
 
-SELECIONE DE ACORDO COM A FORMA DE PAGAMENTO DO CLIENTE
+SELECIONE DE ACORDO COM A FORMA DE PAGAMENTO DO CLIENTE<br><br>
 
 Como sua compra foi feita no cartão de crédito, o estorno poderá ser visualizado no mesmo cartão que foi utilizado, em uma ou duas faturas subsequentes.<br><br>
 
-Como sua compra foi realizada através de boleto, o prazo para estorno é de até 10 dias úteis, após o recebimento de seus dados bancários.<br><br>
+Como sua compra foi realizada através de boleto, o prazo para estorno é de até 10 dias úteis, após o recebimento de seus dados bancários.<br>
+<b>Nome completo do titular da conta:<br>
+CPF:<br>
+Banco:<br>
+Agência:<br>
+Tipo de Conta:<br>
+Conta:<br><br></b>
+
+<b>Lembrando:</b> A conta para depósito deve ser, obrigatoriamente, no nome do titular da compra, ou seja, o nome do comprador que consta na nota fiscal. NÃO efetuamos depósito em conta de terceiros. Além disso, a conta precisa ser registrada como pessoa física.<br><br>
+
+<b>OBS: </b>Importante frisar que os dados bancários enviados para estorno, são responsabilidade do cliente, e caso estes dados estejam incorretos, será acrescido o valor de R$9,00 para reenviar o valor de seu reembolso. Pedimos que os dados sejam conferidos antes de nos encaminhar.<br><br>
 
 <b>Aguardamos seu retorno para seguir com o seu atendimento.</b><br><br>
 
@@ -596,55 +603,37 @@ Um abraço, equipe Appmax!`,
       'KEY_WORD_USER_NAME',
       'KEY_WORD_PARTNER_NAME',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
-Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou te auxiliar neste atendimento!<br><br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, como você está? 😊<br>
+Me chamo KEY_WORD_USER_NAME, sou do suporte Appmax e vou seguir com seu atendimento!<br><br>
 
 Lamento em saber que a situação com a empresa vendedora <b>KEY_WORD_PARTNER_NAME</b> não se resolveu como você gostaria. Mas conforme o combinado, caso você não fosse atendida devidamente, nós da Appmax, tomaríamos uma medida de ação, a fim de resolver o problema.<br>
 Com isso, venho lhe propor a opção de estorno de sua compra, caso tenha interesse, sendo assim, peço que sinalize em resposta deste email se você prefere o estorno ou aguardar pelo produto.<br><br>
 
 <b>Peço que responda este email em até 48 horas.</b><br><br>
 
-SELECIONE DE ACORDO COM A FORMA DE PAGAMENTO DO CLIENTE<br><br>
+SELECIONE DE ACORDO COM A FORMA  DE PAGAMENTO DO CLIENTE<br><br>
 
 Como sua compra foi feita no cartão de crédito, o estorno poderá ser visualizado no mesmo cartão que foi utilizado, em uma ou duas faturas subsequentes.<br><br>
 
 Como sua compra foi realizada através de boleto, o prazo para estorno é de até 10 dias úteis, após o recebimento de seus dados bancários.    <br><br>
+
+<b>Nome completo do titular da conta:<br>
+CPF:<br>
+Banco:<br>
+Agência:<br>
+Tipo de Conta:<br>
+Conta:<br><br></b>
+
+<b>Lembrando:</b> A conta para depósito deve ser, obrigatoriamente, no nome do titular da compra, ou seja, o nome do comprador que consta na nota fiscal. NÃO efetuamos depósito em conta de terceiros. Além disso, a conta precisa ser registrada como pessoa física.<br><br>
+
+<b>OBS: </b>Importante frisar que os dados bancários enviados para estorno, são responsabilidade do cliente, e caso estes dados estejam incorretos, será acrescido o valor de R$9,00 para reenviar o valor de seu reembolso. Pedimos que os dados sejam conferidos antes de nos encaminhar.<br><br>
 
 <b>Aguardamos seu retorno para seguir com seu atendimento.<br></b>
 Espero que em breve você tenha uma nova experiência boa conosco, e qualquer dúvida, permaneço a sua disposição. Nossa resposta deve ocorrer em até 5 dias úteis.<br><br>
 
 Um abraço!`,
   },
-  {
-    id: 39,
-    name: 'Boleto pendente',
-    keyWords: ['boleto', 'pendente'],
-    requiredFields: [
-      'KEY_WORD_CUSTOMER_FIRSTNAME',
-      'KEY_WORD_USER_NAME',
-      'KEY_WORD_PARTNER_EMAIL',
-      'KEY_WORD_PARTNER_NAME',
-    ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
-Me chamo KEY_WORD_USER_NAME, faço parte do time de atendimento da APPMAX e irei auxiliar em seu atendimento!<br><br>
 
-Primeiramente, informo que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário. Assim, a empresa APPMAX somente intermediou a compra feita por você e o estabelecimento vendedor.<br>
-A empresa que lhe vendeu o produto chama-se KEY_WORD_PARTNER_NAME, ela é a responsável em lhe fornecer todos as informações sobre a sua compra, como a emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda. Você deve contatá-los diretamente através dos dados abaixo:<br><br>
-
-<b>E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br><br>
-
-Seu pagamento consta como <b>pendente</b>, informo que o pagamento do boleto pode ser realizado em qualquer banco ou lotérica.<br>
-
-Se o pagamento já foi efetuado, pedimos por gentileza que você nos envie o comprovante de pagamento em resposta deste e-mail.<br>
-Caso não tenha mais interesse no produto, é só desconsiderar a cobrança.<br><br>
-
-Espero ter tirado todas as suas dúvidas!<br>
-Logo você receberá um e-mail automático solicitando a sua avaliação em relação ao meu atendimento. É só escolher uma nota de 0 a 10 podendo também deixar algum comentário. O seu feedback é muito importante para mim ❤<br><br>
-
-Um abraço, atendimento Appmax`,
-  },
   {
     id: 20,
     name: 'Devolucao parceiro masculino',
@@ -745,37 +734,18 @@ Equipe Appmax.`,
     requiredFields: [
       'KEY_WORD_USER_NAME',
       'KEY_WORD_CUSTOMER_FIRSTNAME',
-      'KEY_WORD_CUSTOMER_ORDER',
-      'KEY_WORD_PARTNER_EMAIL',
       'KEY_WORD_PARTNER_NAME',
-      'KEY_WORD_CUSTOMER_FULLNAME',
-      'KEY_WORD_CUSTOMER_CPF',
-      'KEY_WORD_CUSTOMER_EMAIL',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
-Me chamo KEY_WORD_USER_NAME, faço parte do time de atendimento ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem? Espero que sim!<br><br>
 
-Entendi sua solicitação e gostaria de esclarecer que a APPMAX é uma plataforma de processamento e gerenciamento de pagamentos.<br>
-Ao consultar o seu <b>pedido de nº KEY_WORD_CUSTOMER_ORDER</b>, percebi que o mesmo foi <b>estornado</b>, estou colocando a loja <b>KEY_WORD_PARTNER_NAME</b> que é a responsável pela sua compra em cópia neste e-mail para que a mesma consiga esclarecer o motivo do estorno.<br><br>
+    Eu sou KEY_WORD_USER_NAME, do atendimento Appmax e estou aqui para lhe ajudar!<br><br>
 
-Reitero que todas as informações sobre a sua compra são de responsabilidade da empresa KEY_WORD_PARTNER_NAME. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda. Você deve contatá-los diretamente através dos dados abaixo: <br><br>
+    Conforme solicitado verifiquei que, infelizmente, o estorno de seu pedido se deve à inconsistências entre o cartão de crédito e a plataforma de pagamentos Appmax.<br>
+    Como solução sugerimos contatar o emissor do cartão ou, se possível, refazer o seu pedido com a empresa KEY_WORD_PARTNER_NAME, utilizando outro cartão ou boleto bancário como forma de pagamento da sua compra.<br><br>
 
-<b>E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br>
-___________________<br><br>
+    Qualquer dúvida ficamos à disposição!<br><br>
 
-<b>KEY_WORD_PARTNER_NAME</b><br><br>
-
-O pedido em nome de KEY_WORD_CUSTOMER_FIRSTNAME encontra-se como estornado conforme carta de estorno em anexo, solicito por gentileza que esclareça o motivo do estorno.<br><br>
-
-<b>DADOS DO CLIENTE<br>
-NOME: KEY_WORD_CUSTOMER_FULLNAME<br>
-CPF: KEY_WORD_CUSTOMER_CPF<br>
-E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
-Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
-
-Espero ter lhe ajudado, um abraço!<br>
-Equipe Appmax.`,
+    Atenciosamente - Equipe Appmax.`,
   },
   {
     id: 24,
@@ -790,17 +760,15 @@ Equipe Appmax.`,
 Tudo bem com você? Espero que sim!<br>
 Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e vou te auxiliar neste atendimento! <br><br>
 
-Fico muito feliz em saber que a loja responsável pelo seu pedido deu o seguinte retorno:<br><br>
+Percebi que a loja responsável pelo seu pedido deu o seguinte retorno:<br><br>
 
 <b>" COLOCAR AQUI O RETORNO DO PARCEIRO "</b><br><br>
 
-Espero que junto à eles seja possível esclarecer todas as suas dúvidas e solucionar quaisquer situações através do e-mail abaixo:<br><br>
-
+Espero que junto à eles seja possível esclarecer todas as suas dúvidas e solucionar quaisquer situações através do e-mail abaixo:<br>
 <b>E-mail: KEY_WORD_PARTNER_EMAIL</b><br><br>
 
 Com isso, darei o atendimento por parte da Appmax como encerrado. Caso volte a ter alguma questão pendente, peço que retorne este e-mail para que possamos lhe auxiliar novamente.<br>
 
-Agradeço imensamente sua compreensão e espero que tudo seja resolvido da melhor maneira.<br>
 Logo você receberá um e-mail automático solicitando a sua avaliação em relação ao meu atendimento. É só escolher uma nota de 0 a 10 podendo também deixar algum comentário. O seu feedback é muito importante para mim ❤<br><br>
 
 Atendimento Appmax`,
@@ -878,7 +846,6 @@ Mas fique tranquila que estou aqui para te ajudar! Estou intermediando o contato
 <b>Telefone: KEY_WORD_PARTNER_PHONE<br>
 E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br><br>
 
-Desde já, informo que caso a empresa vendedora não lhe responda, ou não resolva o seu problema satisfatoriamente no prazo de até 3 dias úteis, basta você responder esse email que seguirei com o atendimento por aqui.<br>
 _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>,<br><br>
@@ -892,7 +859,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
 
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
+<b>Seu contato deve ocorrer no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
 
 Um Abraço, equipe Appmax!`,
   },
@@ -921,7 +888,6 @@ Mas fique tranquilo que estou aqui para te ajudar! Estou intermediando o contato
 <b>Telefone: KEY_WORD_PARTNER_PHONE<br>
 E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br><br>
 
-Desde já, informo que caso a empresa vendedora não lhe responda, ou não resolva o seu problema satisfatoriamente no prazo de até 3 dias úteis, basta você responder esse email que seguirei com o atendimento por aqui.<br>
 _____________<br><br>
 
 <b>KEY_WORD_PARTNER_NAME</b>,<br><br>
@@ -935,7 +901,7 @@ E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
 Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER</b><br><br>
 
 Lembrando que sua empresa é responsável por todas as informações sobre a compra. Assim como, emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda.<br>
-<b>Aguardamos o seu contato no prazo máximo de 3 dias úteis respondendo a esse email. Nossa resposta deve ocorrer em até 5 dias úteis.</b><br><br>
+<b>Seu contato deve ocorrer no prazo máximo de 3 dias úteis respondendo a esse email.</b><br><br>
 
 Um Abraço, equipe Appmax!`,
   },
@@ -1009,38 +975,19 @@ Um abraço, equipe Appmax`,
       'KEY_WORD_PARTNER_NAME',
       'KEY_WORD_PARTNER_EMAIL',
       'KEY_WORD_PARTNER_PHONE',
-      'KEY_WORD_CUSTOMER_FULLNAME',
-      'KEY_WORD_CUSTOMER_CPF',
-      'KEY_WORD_CUSTOMER_EMAIL',
-      'KEY_WORD_CUSTOMER_ORDER',
     ],
-    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
-Tudo bem com você? Espero que sim!<br>
-Me chamo KEY_WORD_USER_NAME, faço parte do time de suporte ao cliente Appmax e vou te auxiliar neste atendimento.<br><br>
+    content: `Olá, KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?<br><br>
+    Me chamo KEY_WORD_USER_NAME e vou realizar seu atendimento.<br><br>
 
-Identifiquei que você realizou a solicitação de cancelamento da compra ao seu cartão. Porém isso só deve acontecer em casos onde você desconhece a compra. <br>
-Então, para que eu possa lhe ajudar, recomendo que você retorne o contato com o cartão e confirme a compra realizada. Somente após este contato, conseguiremos tomar alguma ação por aqui.<br><br>
+    Me inteirei do que aconteceu e identifiquei que você realizou a solicitação de cancelamento da compra ao seu cartão, isto acontece em casos onde você desconhece a compra, sendo assim sua compra já foi cancelada no dia <b> XX/XX</b>.<br>
+    Além disso, é importante esclarecer que o valor estornado poderá ser visualizado no mesmo cartão utilizado na compra, em forma de crédito, em uma ou duas faturas subsequentes.<br><br>
 
-Lembrando  que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito e que a loja KEY_WORD_PARTNER_NAME é a responsável por todas as informações sobre a sua compra e você pode entrar em contato com ela através dos dados abaixo:<br><br>
+    Lembrando que a APPMAX é uma plataforma de processamento e gerenciamento de pagamentos online, sendo responsável pela transação entre você e loja KEY_WORD_PARTNER_NAME. Caso haja alguma dúvida sobre a sua compra, recomendamos entrar em contato com ela através dos dados abaixo:<br><br>
 
-<b>Telefone: KEY_WORD_PARTNER_PHONE<br>
-E-mail do suporte: KEY_WORD_PARTNER_EMAIL<br><br></b>
+    <b>Telefone: KEY_WORD_PARTNER_PHONE<br>
+    E-mail do suporte: KEY_WORD_PARTNER_EMAIL<br><br></b>
 
-Além disso, estamos colocando a loja em cópia para agilizar seu atendimento.<br>
-______________________<br><br>
-
-<b>KEY_WORD_PARTNER_NAME</b>,<br><br>
-
-Sr. KEY_WORD_CUSTOMER_FIRSTNAME realizou o cancelamento com o cartão. Você pode verificar as informações do pedido, por favor e retornar o contato?<br><br>
-
-<b>DADOS DO CLIENTE:<br>
-NOME: KEY_WORD_CUSTOMER_FULLNAME<br>
-CPF: KEY_WORD_CUSTOMER_CPF<br>
-E-MAIL: KEY_WORD_CUSTOMER_EMAIL<br>
-Nº DO PEDIDO: KEY_WORD_CUSTOMER_ORDER<br><br></b>
-
-Um abraço!<br>
-Equipe Appmax.`,
+    Um abraço, equipe Appmax.`,
   },
   {
     id: 33,
@@ -1086,7 +1033,7 @@ ________<br><br>
 <b>KEY_WORD_PARTNER_NAME,</b><br><br>
 
  
-Estamos abrindo um novo prazo de 24hrs úteis pois a <b>###_INFORMAR_A_SOLICITAÇÃO_VINDA_DO_CLIENTE_###</b> ainda não foi respondida efetivamente.<br>
+Estamos abrindo um novo prazo de 24hrs úteis pois a <b>INFORMAR_A_SOLICITAÇÃO_VINDA_DO_CLIENTE</b> ainda não foi respondida efetivamente.<br>
 Ressalto que, caso não tenhamos um retorno definitivo dentro deste prazo, seguiremos conforme solicitação do cliente.<br><br>
 
 Espero que possamos resolver a situação, e qualquer dúvida, permaneço a sua disposição. O prazo máximo para retorno é de 5 dias úteis.<br><br>
@@ -1097,7 +1044,10 @@ Um abraço, atendimento Appmax`,
     id: 35,
     name: 'Agradecimento avaliacao',
     keyWords: ['agradecimento', 'avaliacao'],
-    requiredFields: ['KEY_WORD_CUSTOMER_FIRSTNAME', 'KEY_WORD_USER_NAME'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME'
+    ],
     content: `Olá <b>KEY_WORD_CUSTOMER_FIRSTNAME</b>!<br><br>
 Tudo bem com você? Espero que sim!<br>
 Me chamo KEY_WORD_USER_NAME, agradeço seu contato e gostaria de solicitar uma ajudinha sua! 😍<br><br>
@@ -1148,9 +1098,8 @@ Abraço, suporte Appmax! `,
       'KEY_WORD_CUSTOMER_EMAIL',
       'KEY_WORD_CUSTOMER_ORDER',
     ],
-    content: `Olá <b>KEY_WORD_PARTNER_NAME</b>!<br><br>
-Tudo bem com você? Espero que sim!<br>
-Me chamo KEY_WORD_USER_NAME e estou auxiliando KEY_WORD_CUSTOMER_FIRSTNAME na resolução de seu problema. <br><br>
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME, tudo bem com você?<br><br>
+Me chamo KEY_WORD_USER_NAME e estou auxiliando na resolução de seu problema.<br><br>
  
 <b>NOME: KEY_WORD_CUSTOMER_FULLNAME<br>
 CPF: KEY_WORD_CUSTOMER_CPF<br>
@@ -1174,5 +1123,75 @@ Um abraço, atendimento Appmax ❤ `,
     keyWords: ['cancelado'],
     requiredFields: ['KEY_WORD_CUSTOMER_EMAIL'],
     content: `CANCELADO`,
+  },
+  {
+    id: 39,
+    name: 'email em branco',
+    keyWords: ['em branco'],
+    requiredFields: ['KEY_WORD_USER_NAME'],
+    content: `Olá xxxxxx, tudo bem com você? <br><br>
+
+    Aqui é KEY_WORD_USER_NAME, da empresa Appmax!<br>
+    Seu último e-mail veio vazio, peço que encaminhe novamente para que assim eu possa dar continuidade em seu atendimento e lhe ajudar da melhor forma.<br><br>
+
+    Aguardo seu retorno 😊 <br><br>
+
+    Um abraço - Atendimento Appmax
+    `,
+  },
+  {
+    id: 40,
+    name: 'Boleto pendente',
+    keyWords: ['boleto', 'pendente'],
+    requiredFields: [
+      'KEY_WORD_CUSTOMER_FIRSTNAME',
+      'KEY_WORD_USER_NAME',
+      'KEY_WORD_PARTNER_EMAIL',
+      'KEY_WORD_PARTNER_NAME',
+    ],
+    content: `Olá KEY_WORD_CUSTOMER_FIRSTNAME!<br>
+Tudo bem com você? Espero que sim!<br>
+Me chamo KEY_WORD_USER_NAME, faço parte do time de atendimento da APPMAX e irei auxiliar em seu atendimento!<br><br>
+
+Primeiramente, informo que a APPMAX é uma plataforma de processamento e gerenciamento de vendas online, sendo responsável pela transação com cartão de crédito ou boleto bancário. Assim, a empresa APPMAX somente intermediou a compra feita por você e o estabelecimento vendedor.<br>
+A empresa que lhe vendeu o produto chama-se KEY_WORD_PARTNER_NAME, ela é a responsável em lhe fornecer todos as informações sobre a sua compra, como a emissão da nota fiscal, encaminhamento do rastreio, envio do produto, além de fornecer todo o suporte necessário em eventuais dúvidas de atendimento pós-venda. Você deve contatá-los diretamente através dos dados abaixo:<br><br>
+
+<b>E-mail do suporte: KEY_WORD_PARTNER_EMAIL</b><br><br>
+
+Seu pagamento consta como <b>pendente</b>, informo que o pagamento do boleto pode ser realizado em qualquer banco ou lotérica.<br>
+
+Se o pagamento já foi efetuado, pedimos por gentileza que você nos envie o comprovante de pagamento em resposta deste e-mail.<br>
+Caso não tenha mais interesse no produto, é só desconsiderar a cobrança.<br><br>
+
+Espero ter tirado todas as suas dúvidas!<br>
+Logo você receberá um e-mail automático solicitando a sua avaliação em relação ao meu atendimento. É só escolher uma nota de 0 a 10 podendo também deixar algum comentário. O seu feedback é muito importante para mim ❤<br><br>
+
+Um abraço, atendimento Appmax`,
+  },
+  {
+    id: 41,
+    name: 'encontrar cadastro',
+    keyWords: ['encontrar', 'cadastro'],
+    requiredFields: [
+      'KEY_WORD_USER_NAME',
+    ],
+    content: ` Olá 🥰 <br>
+    Me chamo KEY_WORD_USER_NAME, faço parte do time de atendimento ao cliente Appmax!<br>
+    Infelizmente não foi possível localizar seu cadastro apenas com os dados já fornecidos.<br><br>
+
+    Para que possamos acessar o seu cadastro é preciso que você nos envie os seguintes dados:<br>
+    <b>Nome completo:<br>
+    Número do CPF:<br>
+    CEP de endereço cadastrado:<br>
+    E-mail cadastrado:<br>
+    Forma de pagamento:<br>
+    Produto adquirido:<br>
+    Endereço cadastrado:<br></b>
+
+    Em caso de compra efetuada com cartão de crédito, informar cpf do titular do cartão.<br><br>
+
+    Assim que você me encaminhar os dados cadastrados, irei dar continuidade em seu atendimento, afim de solucionar o ocorrido para você.<br><br> 
+
+    Me coloco a disposição para as demais dúvidas que você possa vir a ter.<br><br>`,
   },
 ];
